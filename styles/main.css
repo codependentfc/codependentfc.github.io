@@ -34,31 +34,47 @@
   color: #fff;
 }
 
-.learn-more {
-  background-color: #f7f7f7;
-}
-
-.learn-more h3 {
-  font-family: 'Shift', sans-serif;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.learn-more a {
-  color: #00b0ff;
-}
-
-.neighborhood-guides {
+.projects {
     background-color: #efefef;
     border-bottom: 1px solid #dbdbdb;
 }
 
-.neighborhood-guides h2 {
+.projects h2 {
     color: #393c3d;
     font-size: 24px;
 }
 
-.neighborhood-guides p {
+.projects p {
+    font-size: 15px;
+    margin-bottom: 13px;
+}
+
+.profiles {
+    background-color: #efefef;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.profiles h2 {
+    color: #393c3d;
+    font-size: 24px;
+}
+
+.profiles p {
+    font-size: 15px;
+    margin-bottom: 13px;
+}
+
+.icons {
+    background-color: #efefef;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.icons h2 {
+    color: #393c3d;
+    font-size: 24px;
+}
+
+.icons p {
     font-size: 15px;
     margin-bottom: 13px;
 }
