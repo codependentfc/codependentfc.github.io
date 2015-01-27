@@ -1,4 +1,4 @@
-# Team Blog
+# [Team Blog](http://ajamfc.github.io/)
 
 ## Founders and Coders Week 1 Project
 
