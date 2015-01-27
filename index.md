@@ -1,8 +1,8 @@
 ---
-# layout: default
+layout: default
 ---
 
-# AJAM
+# Codependant
 
 [about](/about)
 
