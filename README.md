@@ -1,1 +1,0 @@
-# ajamfc.github.io
