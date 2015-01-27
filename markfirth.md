@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Mark Firth
 permalink: /markfirth/
 ---
