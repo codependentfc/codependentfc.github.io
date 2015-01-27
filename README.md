@@ -7,16 +7,16 @@ A place to find out about our team and the projects we'll be making at [founders
 
 ### Team Members
 
-Amil Vasishtha
+Amil Vasishtha  
 [Github](https://github.com/amilvasishtha)
 
-Jason Luu
+Jason Luu  
 [Github](http://github.com/Jasonspd)
 
-Adam Kowalczyk
+Adam Kowalczyk  
 [Github](http://github.com/adamkowalczyk)
 
-Mark Firth
+Mark Firth  
 [Github](http://github.com/markwilliamfirth)
 
 ### Technologies
