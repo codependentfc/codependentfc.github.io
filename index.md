@@ -5,7 +5,7 @@ title: Home
 
 # Codependant
 
-liquid test {{title}}
+liquid test {{page.title}}
 
 [about](/about)
 
