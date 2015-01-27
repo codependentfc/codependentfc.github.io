@@ -1,4 +1,4 @@
-# [Team Blog](http://ajamfc.github.io/)
+# [Team Website](http://codependant.github.io/)
 
 ## Founders and Coders Week 1 Project
 
