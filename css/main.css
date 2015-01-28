@@ -55,9 +55,9 @@ h1{
 }
 
 #profilepic {
-  width: 200px;
-  border-radius: 204px;
-  border: 4px #0c2445 solid;
+  width: 300px;
+  border-radius: 304px;
+  border: 4px white solid;
   
 /* makes image a block element rather than an in-line element */
   display: block;
