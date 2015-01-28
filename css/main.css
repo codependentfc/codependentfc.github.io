@@ -1,5 +1,15 @@
 
 /* nav bar*/
+
+.page-link {
+color: orangered;
+
+}
+
+.page-link:hover {color:orange;}
+.page-link:active { color: orange; }
+
+
 .trigger {
   color: #5a5a5a;
   font-size: 36px;
