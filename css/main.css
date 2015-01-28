@@ -1,12 +1,11 @@
-.nav a {
+
+/* nav bar*/
+.trigger {
   color: #5a5a5a;
   font-size: 36px;
   font-weight: bold;
   padding: 14px 10px;
   text-transform: uppercase;
-}
-
-.nav li {
   display: inline;
 }
 
