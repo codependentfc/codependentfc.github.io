@@ -3,10 +3,8 @@ title: Codependent - Founders and Coders Team
 email: adamkowalczyk@gmail.com #team email?
 description: > # this means to ignore newlines until "baseurl:"
   Find out who we are and see our work at Founders and Coders.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://codependent.github.io" # the base hostname & protocol for your site
-#twitter_username: 
-#github_username:  
+baseurl: ""
+url: "http://codependentfc.github.io"  
 
 # Build settings
 markdown: kramdown
