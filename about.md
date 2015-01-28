@@ -6,6 +6,6 @@ permalink: /about/
 
 # About Us
 
-We are Codependant, a team of aspiring devlopers learning at [Founders & Coders](http://foundersandcoders.org).
+We are Codependent, a team of aspiring devlopers learning at [Founders & Coders](http://foundersandcoders.org).
 
 

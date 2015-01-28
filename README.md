@@ -1,4 +1,4 @@
-# [Team Website](http://codependant.github.io/)
+# [Team Website](http://codependent.github.io/)
 
 ## Founders and Coders Week 1 Project
 

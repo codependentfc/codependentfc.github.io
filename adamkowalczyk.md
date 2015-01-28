@@ -6,6 +6,6 @@ permalink: /adamkowalczyk/
 
 # Adam Kowalczyk
 
-![Adam Kowalczyk](/assets/images/AKowalczyk.jpg)
+![Adam Kowalczyk](/media/adam.jpg)
 
 My profile
