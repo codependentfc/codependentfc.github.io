@@ -66,6 +66,6 @@ h1{
 }
 
 .thumbnail{
- border: 0 none;
-    box-shadow: none;
+  background-color: none;
+  border: none;
     }
