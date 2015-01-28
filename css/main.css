@@ -1,4 +1,3 @@
-/* CSS HERE :D */
 .nav a {
   color: #5a5a5a;
   font-size: 36px;
@@ -11,58 +10,18 @@
   display: inline;
 }
 
-.projects {
-    background-color: #efefef;
-    border-bottom: 1px solid #dbdbdb;
-}
-
-.projects h2 {
-    color: #393c3d;
-    font-size: 24px;
-}
-
-.projects p {
-    font-size: 15px;
-    margin-bottom: 13px;
-}
-
-.profiles {
-    background-color: #efefef;
-    border-bottom: 1px solid #dbdbdb;
-}
-
-.profiles h2 {
-    color: #393c3d;
-    font-size: 24px;
-}
-
-.profiles p {
-    font-size: 15px;
-    margin-bottom: 13px;
-}
-
-.icons {
-    background-color: #efefef;
-    border-bottom: 1px solid #dbdbdb;
-}
-
-.icons h2 {
-    color: #393c3d;
-    font-size: 24px;
-}
-
-.icons p {
-    font-size: 15px;
-    margin-bottom: 13px;
-}
-
 body {
- 	font-family: Helvetica, Arial, Sans-Serif;
- 	margin: 10px 100px 10px 100px;
- 	background-color: teal;
+  font-family: Helvetica, Arial, Sans-Serif;
+  margin: 10px 333px 10px 333px;
+  background-color: teal;
 
 }
 h1{
-	text-align: center;
-	font-size: 100px;
+  text-align: center;
+  font-size: 100px;
+}
+
+.text {
+    background-color: #efefef;
+    font-size: 22px;
 }
