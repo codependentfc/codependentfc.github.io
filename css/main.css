@@ -53,3 +53,13 @@ h1{
     background-color: #efefef;
     font-size: 22px;
 }
+
+#profilepic {
+  width: 200px;
+  border-radius: 204px;
+  border: 4px #0c2445 solid;
+  
+/* makes image a block element rather than an in-line element */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
