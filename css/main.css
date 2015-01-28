@@ -1,9 +1,11 @@
 
 /* nav bar*/
 
+a {
+  color: #5a5a5a;
+}
 .page-link {
 color: orangered;
-
 }
 
 .page-link:hover {color:orange;}
