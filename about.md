@@ -1,6 +1,7 @@
 ---
 layout: about
 title: About
+nav: main
 permalink: /about/
 ---
 

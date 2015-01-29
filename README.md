@@ -5,6 +5,11 @@
 A static site built with Jeykll and served by Github pages.
 A place to find out about our team and the projects we'll be making at [founders and coders](http://foundersandcoders.org/).
 
+### Methodology
+
+We stripped back the default Jekyll installation and started from scratch.  
+The template you see is our own work, although there are still some remnants of default code.  
+
 ### Team Members
 
 Amil Vasishtha  
@@ -22,4 +27,6 @@ Mark Firth
 ### Technologies
 
 * Jekyll
-
+* Liquid
+* Markdown
+* Bootstrap
