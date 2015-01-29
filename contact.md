@@ -7,6 +7,4 @@ nav: main
 
 ### Contact Us
 
-Who's there?
-
-(Yup, the form works)
+We'd love to hear from you. Drop us a line below!

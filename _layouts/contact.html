@@ -4,11 +4,20 @@ layout: default
 
 {{content}}
 
-<form action="https://getsimpleform.com/messages?form_api_token=d6b14068281668c202665854ccd78036" method="post">
-  <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
-  <input type='hidden' name='redirect_to' value='<the complete return url e.g. http://fooey.com/thank-you.html>' />
-  <!-- all your input fields here.... -->
-  <input type='text' name='test' />
-  <input type='submit' value='Test form' />
+<form id='form' action="https://getsimpleform.com/messages?form_api_token=d6b14068281668c202665854ccd78036" method="post">
+  
+  <input type='hidden' name='redirect_to' value='http://codependentfc.github.io/thankyou/' /> 
+  <!--This is broken locally, as full URL required -->
+  
+  Name: <input type='text'  name='name' />
+  <br/>
+  Email: <input type='text'  name='email' />
+  <br/>
+  Comment:
+  <br/>
+  <textarea name="comment" form="form"></textarea>
+  <br/>
+  <br/>
+  <input type='submit' value='Submit!' />
 </form>
       
