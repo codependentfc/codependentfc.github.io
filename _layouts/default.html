@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html>
-
+  
   {% include head.html %}
 
   <body>
+    <div id='sticky-wrap'>
+    
+      {% include header.html %}
 
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
-
-    {% include footer.html %}
-
+     <div id='sticky-body'> 
+        <div class="page-content">
+          <div class="wrapper">
+            {{ content }}
+          </div>
+        </div>
+       </div>  
+     </div>
+     
+    <div id='sticky-footer'> 
+      {% include footer.html %}
+    </div>  
   </body>
 
 </html>

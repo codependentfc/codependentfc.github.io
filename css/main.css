@@ -1,3 +1,22 @@
+/*Styling for sticky footer*/
+
+html, body {height: 100%;}
+
+#sticky-wrap {min-height: 100%;}
+
+#sticky-body {
+  min-height: 100%;
+  overflow:auto;
+  padding-bottom: 150px;
+}  /* must be same height as the footer */
+
+#sticky-footer {
+  position: relative;
+  margin-top: -150px; /* negative value of footer height */
+  height: 150px;
+  clear:both;
+} 
+
 /*global links styles*/
 
 a {
@@ -27,10 +46,15 @@ color: #5a5a5a;
 .page-link:hover {color:orange;}
 .page-link:active { color: orange; }
 
-/* nav bar*/
-.site-header {
-  background-color: rgba(150,150,255,0.1);
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
+
+
+
+/* nav bar*/
 
 .site-nav {
   text-align: center;
@@ -51,8 +75,6 @@ color: #5a5a5a;
 
 body {
   font-family: Helvetica, Arial, Sans-Serif;
-  /*margin: 10px 20% 10px 20%;*/
-  /*background-color: teal;*/
   background-image: url("/media/sandpaper.png")
 
 }
@@ -65,7 +87,6 @@ body {
 }
 
 .text {
-  /*background-color: #efefef;*/
   font-size: 1.5em;
   margin-left: auto;
   margin-right: auto;
@@ -81,7 +102,6 @@ body {
 }
 
 #intro-box {
-  /*background-color: #efefef;*/
   font-size: 1.5em;
   margin-left: auto;
   margin-right: auto;
@@ -119,6 +139,9 @@ body {
   border: none;
 }
 
+.site-header {
+  background-color: rgba(150,150,255,0.1);
+}
 
 .site-footer {
   text-align: center;
@@ -137,3 +160,6 @@ body {
 #section3 {
   background-color: rgba(150,255,100,0.18);
 }
+
+
+
