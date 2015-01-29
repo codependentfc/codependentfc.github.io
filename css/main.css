@@ -31,6 +31,7 @@ color: #5a5a5a;
 
 .site-nav{
   text-align: center;
+  margin-top: 30px;
 }
 
 .nav-bar {
@@ -73,6 +74,14 @@ body {
   margin-left: auto;
   margin-right: auto;
 
+}
+
+#intro-box {
+  background-color: #efefef;
+  font-size: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
 }
 
 #intro {
