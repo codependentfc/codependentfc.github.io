@@ -1,6 +1,6 @@
 ---
 layout: contact
-title: Contact Us
+title: Contact
 permalink: /contact/
 nav: main
 ---
