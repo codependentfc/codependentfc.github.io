@@ -30,9 +30,7 @@ color: #5a5a5a;
 /* nav bar*/
 
 .site-nav{
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+  text-align: center;
 }
 
 .nav-bar {
