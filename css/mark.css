@@ -1,0 +1,32 @@
+#pp {
+  width: 300px;
+  border-radius: 304px;
+  border: 4px white solid;
+  
+/* makes image a block element rather than an in-line element */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a.darken {
+    display: inline-block;
+    background: black;
+    padding: 0;
+    width: 300px;
+    border-radius: 304px;
+}
+
+a.darken img {
+    display: block;
+
+    -webkit-transition: all 0.25s linear;
+       -moz-transition: all 0.25s linear;
+        -ms-transition: all 0.25s linear;
+         -o-transition: all 0.25s linear;
+            transition: all 0.25s linear;
+}
+
+a.darken:hover img {
+    opacity: 0.6;
+}
