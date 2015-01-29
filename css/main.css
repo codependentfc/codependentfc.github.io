@@ -1,4 +1,4 @@
-
+/*global links styles*/
 
 a {
   color: #5a5a5a;
@@ -27,25 +27,24 @@ color: #5a5a5a;
 .page-link:hover {color:orange;}
 .page-link:active { color: orange; }
 
-
 /* nav bar*/
 
 .site-nav{
-   margin-left: auto;
+  margin-left: auto;
   margin-right: auto;
   width: 50%;
 }
 
 .nav-bar {
   color: #5a5a5a;
-  font-size: 1em;
+  font-size: 1.5em;
   font-weight: bold;
   padding: 14px 10px;
   text-transform: uppercase;
   display: inline;
   margin-left: auto;
   margin-right: auto;
-  width: 25%;
+  width: 50%;
 }
 
 body {
@@ -55,25 +54,34 @@ body {
   background-image: url("/media/sandpaper.png")
 
 }
+
 #banner {
   text-align: center;
   font-size: 4em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .text {
-    background-color: #efefef;
-    font-size: 1.5em;
+  background-color: #efefef;
+  font-size: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container {
   max-width: 80%;
   padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
 #intro {
-  max-width: 70%;
+  max-width: 100%;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #profilepic {
