@@ -82,6 +82,10 @@ body {
   margin-right: auto;
 }
 
+#profile-gallery {
+  margin-top: 30px;
+}
+
 #profilepic {
   width: 300px;
   border-radius: 304px;
@@ -91,6 +95,10 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+#project-gallery {
+  margin-top: 30px;
 }
 
 .thumbnail{
