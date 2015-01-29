@@ -12,7 +12,6 @@
     <!--CSS styling for title, banner links to home page-->
     
     <nav class="site-nav">
-      <a href="#" class="menu-icon"></a>
 
       <div class="nav-bar">
         {% for page in site.pages %}
@@ -21,7 +20,7 @@
           {% endif %}
         {% endfor %}
         <!--For pages in site, if the page has a title and our nav yml = main, then it will show that page as a link-->
-<br> <!-- Naughty!!   -->
+<br>
     <button type="button" class="site-nav"><!--Same styling as nav bar-->
       <span class="nav" aria-hidden="true"><a href="/about" class="menu-icon">About</a></span>
     </button> <!--Simple button-->
