@@ -111,7 +111,12 @@ body {
   margin-top: 30px;
 }
 
-.thumbnail{
+.thumbnail {
   background-color: transparent;
   border: none;
-    }
+}
+
+
+.site-footer {
+  text-align: center;
+}
