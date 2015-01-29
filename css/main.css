@@ -28,10 +28,12 @@ color: #5a5a5a;
 .page-link:active { color: orange; }
 
 /* nav bar*/
-
-.site-nav{
+.site-header {
+  background-color: rgba(150,150,255,0.1);
+}
+.site-nav {
   text-align: center;
-  margin-top: 30px;
+  padding-top: 30px;
 }
 
 .nav-bar {
@@ -48,7 +50,7 @@ color: #5a5a5a;
 
 body {
   font-family: Helvetica, Arial, Sans-Serif;
-  margin: 10px 20% 10px 20%;
+  /*margin: 10px 20% 10px 20%;*/
   /*background-color: teal;*/
   background-image: url("/media/sandpaper.png")
 
@@ -62,7 +64,7 @@ body {
 }
 
 .text {
-  background-color: #efefef;
+  /*background-color: #efefef;*/
   font-size: 1.5em;
   margin-left: auto;
   margin-right: auto;
@@ -78,11 +80,11 @@ body {
 }
 
 #intro-box {
-  background-color: #efefef;
+  /*background-color: #efefef;*/
   font-size: 1.5em;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30px;
+  padding-top: 30px;
 }
 
 #intro {
@@ -93,7 +95,7 @@ body {
 }
 
 #profile-gallery {
-  margin-top: 30px;
+  padding-top: 30px;
 }
 
 #profilepic {
@@ -108,7 +110,7 @@ body {
 }
 
 #project-gallery {
-  margin-top: 30px;
+  padding-top: 30px;
 }
 
 .thumbnail {
@@ -119,4 +121,18 @@ body {
 
 .site-footer {
   text-align: center;
+  background-color: rgba(150,150,75,0.1);
+}
+/*Main page section colours*/
+
+#section1 {
+  background-color: rgba(0,255,255,0.1);
+}
+
+#section2 {
+ background-color: rgba(100,200,255,0.14); 
+}
+
+#section3 {
+  background-color: rgba(150,255,100,0.18);
 }
