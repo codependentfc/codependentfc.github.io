@@ -62,7 +62,18 @@ body {
 
 .text {
     background-color: #efefef;
-    font-size: 22px;
+    font-size: 1.5em;
+}
+
+.container {
+  max-width: 80%;
+  padding: 20px;
+
+}
+
+#intro {
+  max-width: 70%;
+  text-align: center;
 }
 
 #profilepic {
