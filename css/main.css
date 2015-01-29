@@ -1,5 +1,4 @@
 
-/* nav bar*/
 
 a {
   color: #5a5a5a;
@@ -29,9 +28,10 @@ color: #5a5a5a;
 .page-link:active { color: orange; }
 
 
-.trigger {
+/* nav bar*/
+.nav-bar {
   color: #5a5a5a;
-  font-size: 30px;
+  font-size: 1em;
   font-weight: bold;
   padding: 14px 10px;
   text-transform: uppercase;
@@ -40,13 +40,14 @@ color: #5a5a5a;
 
 body {
   font-family: Helvetica, Arial, Sans-Serif;
-  margin: 10px 333px 10px 333px;
-  background-color: teal;
+  margin: 10px 20% 10px 20%;
+  /*background-color: teal;*/
+  background-image: url("/media/sandpaper.png")
 
 }
 h1{
   text-align: center;
-  font-size: 100px;
+  font-size: 4em;
 }
 
 .text {
