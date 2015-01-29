@@ -1,5 +1,6 @@
 /*Styling for sticky footer*/
 
+
 html, body {height: 100%;}
 
 #sticky-wrap {min-height: 100%;}
@@ -7,13 +8,13 @@ html, body {height: 100%;}
 #sticky-body {
   min-height: 100%;
   overflow:auto;
-  padding-bottom: 150px;
+  padding-bottom: 75px;
 }  /* must be same height as the footer */
 
 #sticky-footer {
   position: relative;
-  margin-top: -150px; /* negative value of footer height */
-  height: 150px;
+  margin-top: -75px; /* negative value of footer height */
+  height: 75px;
   clear:both;
 } 
 
@@ -143,10 +144,7 @@ body {
   background-color: rgba(150,150,255,0.1);
 }
 
-.site-footer {
-  text-align: center;
-  background-color: rgba(150,150,75,0.1);
-}
+
 /*Main page section colours*/
 
 #section1 {
