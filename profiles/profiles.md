@@ -13,6 +13,6 @@ permalink: /profiles/
 
 [Amil Vasishtha](/amilvasishtha/)
 
-[Mark Firth](/markfirth/)
+[Mark William Firth](/markwilliamfirth/)
 
 This page probably wont exist, really a placeholder for the navbar
