@@ -31,9 +31,10 @@ color: #5a5a5a;
 .site-header {
   background-color: rgba(150,150,255,0.1);
 }
+
 .site-nav {
   text-align: center;
-  padding: 30px;
+  padding-top: 30px;
 }
 
 .nav-bar {
