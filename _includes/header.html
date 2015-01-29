@@ -11,29 +11,21 @@
     </a></h1>
     <!--CSS styling for title, banner links to home page-->
     
-    <nav class="site-nav">
-
-      <div class="nav-bar">
-        
-        {% for page in site.pages %}
-          {% if page.title and page.nav == 'main' %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          {% endif %}
-        {% endfor %}
-        <!--For pages in site, if the page has a title and our nav yml = main, then it will show that page as a link-->
+     <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-static-top">
+        <li class="button"><a href="/about">About</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdow-toggle" data-toggle="dropdown">The Team<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Profiles></li>
+                <li><a href="/adamkowalczyk">Adam</a></li>
+                <li><a href="/jasonluu">Jason</a></li>
+                <li><a href="/amilvasishtha">Amil</a></li>
+                <li><a href="/markwilliamfirth">Mark</a></li>
+              </ul>
+          </li>
+      </ul>
+    </div>>  
     
-    <!-- 
-    <button type="button" class="site-nav">
-      <span class="nav" aria-hidden="true"><a href="/about" class="menu-icon">About</a></span>
-    </button> 
-   <button type="button" class="site-nav"><
-      <span class="nav" aria-hidden="true"><a href="/profiles" class="menu-icon">Profiles</a></span>
-    </button>
-    <button type="button" class="site-nav">
-      <span class="nav" aria-hidden="true"><a href="/projects" class="menu-icon">Projects</a></span>
-    </button>
- -->
-      </div>
-    </nav>
   </div>
 </header>
