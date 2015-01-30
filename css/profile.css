@@ -2,8 +2,6 @@
   width: 300px;
   border-radius: 304px;
   border: 4px white solid;
-  
-/* makes image a block element rather than an in-line element */
   display: block;
   margin-left: auto;
   margin-right: auto;

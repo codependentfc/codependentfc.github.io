@@ -41,11 +41,38 @@ a:active {
 }
 
 .page-link {
-color: #5a5a5a;
+  color: #5a5a5a;
 }
 
-.page-link:hover {color:orange;}
-.page-link:active { color: orange; }
+.page-link:hover {
+  color:orange;
+}
+
+.page-link:active { 
+  color: orange; 
+}
+
+a.darken {
+    /*display: inline-block;*/
+    background: black;
+    padding: 0;
+    width: 300px;
+    border-radius: 304px;
+}
+
+a.darken img {
+    /*display: block;*/
+
+    -webkit-transition: all 0.25s linear;
+       -moz-transition: all 0.25s linear;
+        -ms-transition: all 0.25s linear;
+         -o-transition: all 0.25s linear;
+            transition: all 0.25s linear;
+}
+
+a.darken:hover img {
+    opacity: 0.6;
+}
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
