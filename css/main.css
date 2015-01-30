@@ -188,6 +188,24 @@ body {
   bottom:50%;
 }
 
+#logo {
+  z-index:100;
+  position: absolute;
+  top: 5%;
+  left:0;
+  right:0;
+  bottom:50%;
+}
+
+#arrow {
+  z-index:100;
+  position: absolute;
+  top: 75%;
+  left:0;
+  right:0;
+  bottom:50%;
+}
+
 .landing-area p{
   z-index:100;
   color:white;
