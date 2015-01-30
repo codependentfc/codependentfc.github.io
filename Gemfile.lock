@@ -124,5 +124,4 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages (= 32)
-  jemoji
   json
