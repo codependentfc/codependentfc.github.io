@@ -1,5 +1,5 @@
 ---
-layout: profiles
+layout: profile
 css: profile
 title: Amil Vasishtha
 profilePic: /media/amil.jpg

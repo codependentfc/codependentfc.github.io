@@ -1,5 +1,5 @@
 ---
-layout: profiles
+layout: profile
 css: profile
 title: Adam Kowalczyk
 profilePic: /media/adam.jpg

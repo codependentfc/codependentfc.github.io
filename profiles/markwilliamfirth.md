@@ -1,5 +1,5 @@
 ---
-layout: profiles
+layout: profile
 css: profile
 title: Mark William Firth
 profilePic: /media/mark.jpg

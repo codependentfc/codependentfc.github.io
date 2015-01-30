@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: project
 title: Team Website
+tagline: Week 1 - Build a website to show the world our work
 permalink: /projects/week1/
 ---
-
-## Week 1: Build a website to show the world our work
 
 ### We used Jeykll and Github pages to build this fine website you're curently browsing!
 

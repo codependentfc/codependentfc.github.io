@@ -1,5 +1,5 @@
 ---
-layout: profiles
+layout: profile
 css: profile
 title: Jason Luu
 profilePic: /media/jason.jpg
