@@ -115,7 +115,6 @@ body {
 
 }
 
-
 #intro {
   max-width: 100%;
   font-size: 25px;
@@ -220,6 +219,11 @@ body {
 
 .landing-area a {
   color: white;
+}
+
+#form-div {
+  margin-left: auto
+  margin-right: auto;
 }
 
 

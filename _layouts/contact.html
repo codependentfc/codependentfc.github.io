@@ -2,40 +2,40 @@
 layout: default
 ---
 
-<br>
-<center>
-    <h1>{{page.title}}</h1>
-</center>
-<br>
 
-<center>
+    <h1>{{page.title}}</h1>
+
+
+
+
     <p>We'd love to hear from you. Drop us a line below!
     </p>
 
 {{content}}
+<div id='form-div'>
+  <form id='form' action="https://getsimpleform.com/messages?form_api_token=d6b14068281668c202665854ccd78036" method="post">
+    
+    <input type='hidden' name='redirect_to' value='http://codependentfc.github.io/thankyou/' /> 
+    <!--This is broken locally, as full URL required -->
+    
+   
+    <br/>
+    Name:
+    <br/><input type='text'  name='name' />
+    <br/>
+    <br/>
+    Email:
+    <br/>
+    <input type='text'  name='email' />
+    <br/>
+    <br/>
+    Comment:
+    <br/>
+    <textarea name="comment" form="form"></textarea>
+    <br/>
+    <br/>
+    <input type='submit' value='Submit!' />
 
-<form id='form' action="https://getsimpleform.com/messages?form_api_token=d6b14068281668c202665854ccd78036" method="post">
-  
-  <input type='hidden' name='redirect_to' value='http://codependentfc.github.io/thankyou/' /> 
-  <!--This is broken locally, as full URL required -->
-  
-  <center> 
-  <br/>
-  Name:
-  <br/><input type='text'  name='name' />
-  <br/>
-  <br/>
-  Email:
-  <br/>
-  <input type='text'  name='email' />
-  <br/>
-  <br/>
-  Comment:
-  <br/>
-  <textarea name="comment" form="form"></textarea>
-  <br/>
-  <br/>
-  <input type='submit' value='Submit!' />
-  </center>
-</form>
+  </form>
+</div>
       
