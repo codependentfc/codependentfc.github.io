@@ -154,17 +154,12 @@ body {
 
 /*Main page section colours*/
 
-/*currently unused, preserving for the moment*/
-#section1 {
-  background-color: rgba(0,255,255,0.1);
-}
-
 #section2 {
- background-color: rgba(100,200,255,0.14); 
+  background-color: #495D82;
 }
 
 #section3 {
-  background-color: rgba(150,255,100,0.18);
+  background-color: #444B57;
 }
 
 /**/
@@ -222,4 +217,16 @@ body {
   color: white;
 }
 
+.nav {
+  font-family: Consolas;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+#titles {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
 
