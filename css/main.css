@@ -223,6 +223,9 @@ body {
   text-align: center;
 }
 
+.navbar {
+  margin-bottom: 0;
+}
 
 .nav {
   font-family: Consolas;
