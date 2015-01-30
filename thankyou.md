@@ -7,7 +7,9 @@ permalink: /thankyou/
 ## Thanks!
 
 
-Your form has been submitted succesfully. :+1:  :smile:
+
+Your form has been submitted succesfully.
+
 
 
 [There's no place like home...](/)
