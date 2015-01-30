@@ -221,9 +221,10 @@ body {
   color: white;
 }
 
-#form-div {
+.centerMe {
   margin-left: auto
   margin-right: auto;
+  text-align: center;
 }
 
 
