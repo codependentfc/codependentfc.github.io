@@ -9,5 +9,8 @@ baseurl: ""
 
 url: "http://codependentfc.github.io"  
 
+gems:
+  - jemoji
+
 # Build settings
 markdown: kramdown
