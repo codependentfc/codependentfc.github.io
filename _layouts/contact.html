@@ -2,6 +2,16 @@
 layout: default
 ---
 
+<br>
+<center>
+    <h1>{{page.title}}</h1>
+</center>
+<br>
+
+<center>
+    <p>We'd love to hear from you. Drop us a line below!
+    </p>
+
 {{content}}
 
 <form id='form' action="https://getsimpleform.com/messages?form_api_token=d6b14068281668c202665854ccd78036" method="post">
@@ -9,9 +19,16 @@ layout: default
   <input type='hidden' name='redirect_to' value='http://codependentfc.github.io/thankyou/' /> 
   <!--This is broken locally, as full URL required -->
   
-  Name: <input type='text'  name='name' />
+  <center> 
   <br/>
-  Email: <input type='text'  name='email' />
+  Name:
+  <br/><input type='text'  name='name' />
+  <br/>
+  <br/>
+  Email:
+  <br/>
+  <input type='text'  name='email' />
+  <br/>
   <br/>
   Comment:
   <br/>
@@ -19,5 +36,6 @@ layout: default
   <br/>
   <br/>
   <input type='submit' value='Submit!' />
+  </center>
 </form>
       
