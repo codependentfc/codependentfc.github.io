@@ -14,18 +14,38 @@
           <div class='landing-area'>
       
             <h1 id='banner'>
-              <a class="site-title" href="{{ site.baseurl }}/">
+              <img id="logo" width="90%" src="media/logo.png"/> 
+
+              <br>
+              <br>
+
+
+              <!-- <a class="site-title" href="{{ site.baseurl }}/">
                 <span style="color: white"> 
                 <span style="color: white">&lt;</span> 
                 C O</span> 
                 <span style="color: white"> D E 
                 <span style="color: white">&gt;</span> 
                 </span> <span style="color: white">P E N D E N T</span>
-              </a>
+              </a> -->
+
+    <script>
+              $( document ).ready(function() {
+        $( "arrow" ).click(function( event ) {
+            alert( "The link will no longer take you to jquery.com" );
+            event.preventDefault();
+        });
+    });
+              </script>
+
+              <img id="arrow" width="100px" src="media/arrow.png"/>
+            
             </h1>  
             <p id='intro'>A group of aspiring developers based in London, honing our skills with <a href="http://foundersandcoders.org">Founders &amp; Coders</a>.</p>
           </div>
  
+
+
 
 
        <div id='sticky-body'> 
