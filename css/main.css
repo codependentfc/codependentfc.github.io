@@ -123,10 +123,11 @@ body {
 
 #intro {
   max-width: 100%;
-  font-size: 25px;
+  font-size: 2em;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  color: white;
 }
 
 #profile-gallery {
@@ -199,7 +200,7 @@ body {
   bottom: 50%;
   overflow: hidden;
 }
-
+/*
 .landing-area p{
   z-index:100;
   color:white;
@@ -210,11 +211,10 @@ body {
   left:0;
   right:0;
   bottom:0;
-  display: none;
   max-width: 90%;
   max-height: 10%;
   font-size: 1em;
-}
+}*/
 
 .landing-area a {
   color: white;
