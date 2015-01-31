@@ -11,152 +11,157 @@ js : main
   {% include head.html %}
 
     <body>
+        <!-- WRAPPER FOR BOOTSTRAP -->
+        <!-- <div class='container-fluid'> -->
+            
+            <div id='sticky-wrap'>
+            
+                {% include header.html %}
+                <div>
+                    <img id="image" width="100%" src="media/banner.png"/>
+           
+                    <div class='landing-area'>
+      
+                        <img id="logo" width="90%" src="media/logo.png"/> 
 
-        <div id='sticky-wrap'>
-        
-            {% include header.html %}
-            <div id="container">
-                <img id="image" width="100%" src="media/banner.png"/>
-       
-                <div class='landing-area'>
-  
-                    <img id="logo" width="90%" src="media/logo.png"/> 
-
-                    <a href='#landHere'>
-                        <img id="arrow" width="100px" src="media/arrow.png"/>
-                    </a>
-                        
-                    <p id='intro'>A group of aspiring developers based in London, honing our skills with <a href="http://foundersandcoders.org">Founders &amp; Coders</a>.</p>
-                </div>
-            </div>
-
-
-
-               <div id='sticky-body'> 
-                  <div class="page-content">
-                    <div class="wrapper">
-
-                        <section id='section2'>
-                        <br>
-                        <h2 id='landHere' class="titles"> &lt; T E A M &gt; </h2>
-
-                            <div id='profile-gallery' class="row">
-                                <div class="col-md-2">
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="thumbnail">
-                                        <a class="darken" href="/adamkowalczyk">
-                                            <img id="profilepic" src="media/adam.jpg">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="thumbnail">
-                                        <a class="darken" href="/jasonluu">
-                                            <img id="profilepic" src="media/jason.jpg">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="thumbnail">
-                                        <a class="darken" href="/amilvasishtha">
-                                            <img id="profilepic" src="media/amil.jpg">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="thumbnail">
-                                        <a class="darken" href="/markwilliamfirth">
-                                            <img id="profilepic" src="media/mark.jpg">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                            <br>
-                        </section>
-
-                        <section id='section3'>
-                            <div id='project-gallery' class="text">
-                                <div class="container">
-                                <br>
-                                    <h2 class="titles"> &lt; P R O J E C T S &gt; </h2>
-                                    <br>
-<!--                                     <p class="text">Over the next 8 weeks we'll be creating a series of web projects, you can view our progress by clicking on the thumbnails below:</p>
-                                    <br> -->
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <div class="thumbnail">
-                                                <a href="/projects/week1">
-                                                    <img src="media/1.png">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="thumbnail">
-                                                <a href="/projects/watchthisspace">
-                                                    <img src="media/2.png">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="thumbnail">
-                                                <a href="/projects/watchthisspace">
-                                                    <img src="media/3.png">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="thumbnail">
-                                                <a href="/projects/watchthisspace">
-                                                    <img src="media/4.png">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="thumbnail">
-                                                <a href="/projects/watchthisspace">
-                                                    <img src="media/5.png">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="thumbnail">
-                                            <a href="/projects/watchthisspace">
-                                                    <img src="media/6.png">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="thumbnail">
-                                                <a href="/projects/watchthisspace">
-                                                    <img src="media/7.png">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="thumbnail">
-                                                <a href="/projects/watchthisspace">
-                                                    <img src="media/8.png">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                        </section>
+                        <a href='#landHere'>
+                            <img id="arrow" width="100px" src="media/arrow.png"/>
+                        </a>
+                            
+                        <p id='intro'>A group of aspiring developers based in London, honing our skills with <a href="http://foundersandcoders.org">Founders &amp; Coders</a>.</p>
                     </div>
                 </div>
-                </div>  
+
+
+
+                   <div id='sticky-body'> 
+                      <div class="page-content">
+                        <div class="wrapper">
+
+                            <section id='section2'>
+                            <br>
+                            <h2 id='landHere' class="titles"> &lt; T E A M &gt; </h2>
+
+                                <div id='profile-gallery' class="row">
+                                    <div class="col-md-2">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="thumbnail">
+                                            <a class="darken" href="/adamkowalczyk">
+                                                <img id="profilepic" src="media/adam.jpg">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="thumbnail">
+                                            <a class="darken" href="/jasonluu">
+                                                <img id="profilepic" src="media/jason.jpg">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="thumbnail">
+                                            <a class="darken" href="/amilvasishtha">
+                                                <img id="profilepic" src="media/amil.jpg">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="thumbnail">
+                                            <a class="darken" href="/markwilliamfirth">
+                                                <img id="profilepic" src="media/mark.jpg">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+                            </section>
+
+                            <section id='section3'>
+                                <div id='project-gallery' class="text">
+                                    <div class="container">
+                                    <br>
+                                        <h2 class="titles"> &lt; P R O J E C T S &gt; </h2>
+                                        <br>
+
+                                   
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="thumbnail">
+                                                    <a href="/projects/week1">
+                                                        <img src="media/1.png">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="thumbnail">
+                                                    <a href="/projects/watchthisspace">
+                                                        <img src="media/2.png">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="thumbnail">
+                                                    <a href="/projects/watchthisspace">
+                                                        <img src="media/3.png">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="thumbnail">
+                                                    <a href="/projects/watchthisspace">
+                                                        <img src="media/4.png">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="thumbnail">
+                                                    <a href="/projects/watchthisspace">
+                                                        <img src="media/5.png">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="thumbnail">
+                                                <a href="/projects/watchthisspace">
+                                                        <img src="media/6.png">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="thumbnail">
+                                                    <a href="/projects/watchthisspace">
+                                                        <img src="media/7.png">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="thumbnail">
+                                                    <a href="/projects/watchthisspace">
+                                                        <img src="media/8.png">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                            </section>
+                        </div>
+                    </div>
+                    </div>  
+                </div>
+               
             </div>
-           
-        </div>
 
 
-        <div id='sticky-footer'> 
-          {% include footer.html %}
-        </div>  
+            <div id='sticky-footer'> 
+              {% include footer.html %}
+            </div>
+        
+        <!-- </div>      -->
+        
     </body>
 
 </html>
