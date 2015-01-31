@@ -176,13 +176,17 @@ body {
   overflow: hidden;
 }
 
+.landing-area{
+  float: left;
+}
+
 #logo {
   z-index: 100;
   position: absolute;
   top: 12%;
   left: 6%;
   /*right: 50%;*/
-  bottom:50%;
+  bottom: 0;
   overflow: hidden;
 }
 
@@ -190,7 +194,7 @@ body {
   z-index:100;
   position: absolute;
   top: 75%;
-  left: 46%;
+  left: 44%;
   right: 0;
   bottom: 50%;
   overflow: hidden;
@@ -205,7 +209,11 @@ body {
   top: 50%;
   left:0;
   right:0;
-  bottom:50%;
+  bottom:0;
+  display: none;
+  max-width: 90%;
+  max-height: 10%;
+  font-size: 1em;
 }
 
 .landing-area a {
