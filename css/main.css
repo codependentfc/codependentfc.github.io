@@ -135,7 +135,7 @@ body {
 }
 
 
-#profilepic {
+.profilepic {
   width: 300px;
   border-radius: 304px;
   border: 4px white solid;
