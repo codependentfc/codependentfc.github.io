@@ -2,12 +2,12 @@
 
 title: Codependent @ Founders and Coders
 
-description: > # this means to ignore newlines until "baseurl:"
+description: > # this means to ignore newlines until 'baseurl:'
   Find out who we are and see our work at Founders and Coders.
 
-baseurl: ""
+baseurl: ''
 
-url: "http://codependentfc.github.io"  
+url: 'http://codependentfc.github.io'  
 
 # gems:
 #   - jemoji
