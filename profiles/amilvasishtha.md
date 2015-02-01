@@ -9,4 +9,3 @@ codewars: http://www.codewars.com/users/amilvasishtha
 permalink: /amilvasishtha/
 ---
 
-Hi! My name's Amil, and I'm a code nut!

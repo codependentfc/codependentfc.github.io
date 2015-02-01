@@ -9,4 +9,3 @@ codewars: ttp://www.codewars.com/users/Jasonspd
 permalink: /jasonluu/
 ---
 
-Hi! I'm Jason, and I'm code crazy!

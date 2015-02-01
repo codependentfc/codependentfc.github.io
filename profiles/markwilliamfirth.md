@@ -8,5 +8,3 @@ github: http://www.github.com/markwilliamfirth
 codewars: http://www.codewars.com/users/markwilliamfirth
 permalink: /markwilliamfirth/
 ---
-
-Hi! I'm Mark, and I'm on the road to code!
