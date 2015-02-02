@@ -1,7 +1,7 @@
 $(document).ready(function(){
   // section names
   var searchTerms = ['uk-news','travel', 'football'];
-  // api request URL with blank space for relevent section name
+  // api request URL with blank space (null) for relevent section name
   var request = ['http://content.guardianapis.com/search?show-fields=trailText&q=',null,'&api-key=test'];
   // for each search term:
   $.each(searchTerms, function (ind, val) {
