@@ -1,14 +1,30 @@
 $(document).ready(function(){
   $.getJSON( 'http://content.guardianapis.com/search?api-key=test&section=uk-news', function( data ) {
-    var items = [];
+    var titles = [],
+        trail = [],
+        webUrls = [];
     $.each( data.response.results, function( index, val ) {
-      items.push( '<li id="' + index + '">' + val.webTitle + '</li>' );
+      titles.push( '<li id=title"' + index + '">' + val.webTitle + '</li>' );
+      console.log(data);
+    });
+    // $.each( data.response.results, function( index, val ) {
+    //   titles.push( '<li id=trail"' + index + '">' + val.??? + '</li>' );
+    //   console.log(data);
+    // });
+    $.each( data.response.results, function( index, val ) {
+      webUrls.push( '<li id=webUrl"' + index + '">' + val.webUrl + '</li>' );
       console.log(data);
     });
 
     $( '<ul/>', {
-      'class': 'my-new-list',
-      html: items.join( '' )
+      'id': 'titles',
+      html: titles.join( '' )
     }).appendTo( 'body' );
+
+    $( '<ul/>', {
+      'id': 'urls',
+      html: webUrls.join( '' )
+    }).appendTo( 'body' );
+
   });
 });
