@@ -2,7 +2,7 @@ $(document).ready(function(){
   // section names
   var searchTerms = ['uk-news','travel', 'football'];
   // api request URL with blank space (null) for relevent section name
-  var request = ['http://content.guardianapis.com/search?show-fields=trailText&q=',null,'&api-key=test'];
+  var request = ['http://content.guardianapis.com/search?show-fields=trailText&q=',null,'&api-key=yht9jzt3ccngxwgyknvfaj89'];
   // for each search term:
   $.each(searchTerms, function (ind, val) {
     // insert search term into URL array, and join into string.
