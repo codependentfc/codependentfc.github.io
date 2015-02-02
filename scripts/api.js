@@ -1,10 +1,10 @@
 $(document).ready(function(){
-  $.getJSON( 'http://content.guardianapis.com/search?api-key=test&section=uk-news', function( data ) {
+  $.getJSON( 'http://content.guardianapis.com/search?show-fields=trailText&q=uk-news&api-key=test', function( data ) {
     var titles = [],
         trail = [],
         webUrls = [];
     $.each( data.response.results, function( index, val ) {
-      titles.push( '<li id=title"' + index + '"><a href="'+ val.webUrl +'">' + val.webTitle + '</a></li>' );
+      titles.push( '<li id=title"' + index + '"><a data-toggle="tooltip" title="'+ val.fields.trailText+'" href="'+ val.webUrl +'">' + val.webTitle + '</a></li>' );
       console.log(data);
     });
 
@@ -14,12 +14,12 @@ $(document).ready(function(){
     }).appendTo( '#UKNews' );
   });
 
-  $.getJSON( 'http://content.guardianapis.com/search?api-key=test&section=travel', function( data ) {
+  $.getJSON( 'http://content.guardianapis.com/search?show-fields=trailText&q=travel&api-key=test', function( data ) {
     var titles = [],
         trail = [],
         webUrls = [];
     $.each( data.response.results, function( index, val ) {
-      titles.push( '<li id=title"' + index + '"><a href="'+ val.webUrl +'">' + val.webTitle + '</a></li>' );
+      titles.push( '<li id=title"' + index + '"><a data-toggle="tooltip" title="'+ val.fields.trailText+'" href="'+ val.webUrl +'">' + val.webTitle + '</a></li>' );
       console.log(data);
     });
 
@@ -29,12 +29,12 @@ $(document).ready(function(){
     }).appendTo( '#travel' );
   });
 
-  $.getJSON( 'http://content.guardianapis.com/search?api-key=test&section=football', function( data ) {
+  $.getJSON( 'http://content.guardianapis.com/search?show-fields=trailText&q=football&api-key=test', function( data ) {
     var titles = [],
         trail = [],
         webUrls = [];
     $.each( data.response.results, function( index, val ) {
-      titles.push( '<li id=title"' + index + '"><a href="'+ val.webUrl +'">' + val.webTitle + '</a></li>' );
+      titles.push( '<li id=title"' + index + '"><a data-toggle="tooltip" title="'+ val.fields.trailText+'" href="'+ val.webUrl +'">' + val.webTitle + '</a></li>' );
       console.log(data);
     });
 
