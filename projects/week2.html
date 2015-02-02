@@ -11,24 +11,24 @@ permalink: /week2/
   {% include head.html %}
 
   <body>
+    <div class='container'>
+       <div role='tabpanel'>
 
- <div role="tabpanel">
+        <!-- Nav tabs -->
+        <ul class='nav nav-tabs' role='tablist'>
+          <li role='presentation' class='active'><a href='#uk-news' aria-controls='uk-news' role='tab' data-toggle='tab'>UK News</a></li>
+          <li role='presentation'><a href='#travel' aria-controls='travel' role='tab' data-toggle='tab'>Travel</a></li>
+          <li role='presentation'><a href='#football' aria-controls='football' role='tab' data-toggle='tab'>Football</a></li>
+        </ul>
 
-  <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#UKNews" aria-controls="UKNews" role="tab" data-toggle="tab">UK News</a></li>
-    <li role="presentation"><a href="#travel" aria-controls="travel" role="tab" data-toggle="tab">Travel</a></li>
-    <li role="presentation"><a href="#football" aria-controls="football" role="tab" data-toggle="tab">Football</a></li>
-  </ul>
+        <!-- Tab panes -->
+        <div class='tab-content'>
+          <div role='tabpanel' class='tab-pane active' id='uk-news'></div>
+          <div role='tabpanel' class='tab-pane' id='travel'></div>
+          <div role='tabpanel' class='tab-pane' id='football'></div>
+        </div>
 
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="UKNews"></div>
-    <div role="tabpanel" class="tab-pane" id="travel"></div>
-    <div role="tabpanel" class="tab-pane" id="football"></div>
-  </div>
-
-</div>
-
+      </div>
+    </div>
   </body>
 </html>
