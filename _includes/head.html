@@ -9,9 +9,9 @@
   <link rel='icon' type='image/png' href='/media/favicon.ico'>
 
   <link rel='canonical' href='{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}'>
-  
+
   <link rel='alternate' type='application/rss+xml' title='{{ site.title }}' href='{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}' />
-  
+
   <link rel='stylesheet' type='text/css' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css'>
   <link rel='stylesheet' href='{{ '/css/main.css' | prepend: site.baseurl }}'>
   {% if page.css == 'profile' %}
@@ -22,8 +22,12 @@
   <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js'></script>
   {% if page.js == 'about' %}
     <script src='/scripts/about.js'></script>
-  {% else if page.js == 'main' %}  
+  {% endif %}
+  {% if page.js == 'main' %}
     <script src='/scripts/main.js'></script>
   {% endif %}
-  
+  {% if page.js == 'api' %}
+    <script src='/scripts/api.js'></script>
+  {% endif %}
+
 </head>
