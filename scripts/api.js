@@ -1,8 +1,8 @@
-$(document).ready(function(){
+$(document).ready(function() {
   // section names
-  var searchTerms = ['uk-news','travel', 'football'];
+  var searchTerms = ['uk-news', 'travel', 'football'];
   // api request URL with blank space (null) for relevent section name
-  var request = ['http://content.guardianapis.com/search?show-fields=trailText&q=',null,'&api-key=yht9jzt3ccngxwgyknvfaj89'];
+  var request = ['http://content.guardianapis.com/search?show-fields=trailText&q=', null, '&api-key=yht9jzt3ccngxwgyknvfaj89'];
   // for each search term:
   $.each(searchTerms, function (ind, val) {
     // insert search term into URL array, and join into string.
@@ -10,9 +10,11 @@ $(document).ready(function(){
     var thisRequest = request.join('');
     var stories = [];
     // make api request and make response object ('data') available to a function
-    $.getJSON(thisRequest, function(data){
+    $.getJSON(thisRequest)
+    // GET sucess:
+    .done(function(data) {
       // for each element of the array in the object at Obj.response.results:
-      $.each(data.response.results, function (ind, val){
+      $.each(data.response.results, function (ind, val) {
         // push a string to the stories array that will constitute valid html when later appended to page.
         // 'val' here is the value at a given index of the array of results.
         // So the api calls here are shorthand for e.g. Obj.response.results[ind].webUrl
@@ -20,7 +22,11 @@ $(document).ready(function(){
       });
     // create a new <ul> element, put the contents of the 'stories' array in it,
     // and append it to the page in the the element with the id matching the search term ('val')
-    $( '<ul/>', {'class': 'titles',html: stories.join('')}).appendTo( '#'+val );
+      $( '<ul/>', {'class': 'titles', html: stories.join('')}).appendTo( '#'+val );
+    })
+    // GET failure:
+    .fail(function(){
+      $( '<ul/>', { 'class': 'titles', html: '<li>Error contacting server</li>' }).appendTo( '#'+val );
     });
   });
 });
