@@ -20,6 +20,7 @@ $(document).ready(function() {
       $.each(trails, function (ind, val){
         $('#'+searchVal+'-trail'+(ind+1)).append('<a href="'+urls[ind]+'">'+val+'</a>');
       });
+      // experiemnting with buttons to provide full story
       $('.fullText').click(function(){
         alert(data.response.results[0].fields.body);
       });

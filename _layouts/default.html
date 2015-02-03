@@ -4,8 +4,7 @@
   {% include head.html %}
 
   <body>
-    <!-- WRAPPER FOR BOOTSTRAP -->
-    <!-- <div class='container-fluid'>   -->
+
       <div id='sticky-wrap'>
         {% include header.html %}
         <div id='sticky-body'>
@@ -13,8 +12,10 @@
         </div>
       </div>
       <div id='sticky-footer'>
-        {% include footer.html %}
+        {% unless page.title == 'News Feed' %}
+          {% include footer.html %}
+        {% endunless %}
       </div>
-    <!-- </div> -->
+
   </body>
 </html>
