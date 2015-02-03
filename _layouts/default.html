@@ -6,25 +6,15 @@
   <body>
     <!-- WRAPPER FOR BOOTSTRAP -->
     <!-- <div class='container-fluid'>   -->
-
       <div id='sticky-wrap'>
-
         {% include header.html %}
-
-       <div id='sticky-body'>
-          <!-- page-content and wrapper unused? -->
-          <div class='page-content'>
-            <div class='wrapper'>
-              {{ content }}
-            </div>
-          </div>
+        <div id='sticky-body'>
+          {{ content }}
         </div>
       </div>
       <div id='sticky-footer'>
         {% include footer.html %}
       </div>
-
     <!-- </div> -->
-
   </body>
 </html>
