@@ -9,6 +9,8 @@ html, body {height: 100%;}
   min-height: 100%;
   overflow:auto;
   padding-bottom: 75px;
+  /*Top padding to bring content out from under fixed nav*/
+  padding-top: 50px;
 }  /* must be same height as the footer */
 
 #sticky-footer {
@@ -16,7 +18,7 @@ html, body {height: 100%;}
   margin-top: -75px; /* negative value of footer height */
   height: 75px;
   clear:both;
-} 
+}
 
 /*global links styles*/
 
@@ -48,8 +50,8 @@ a:active {
   color:orange;
 }
 
-.page-link:active { 
-  color: orange; 
+.page-link:active {
+  color: orange;
 }
 
 a.darken {
