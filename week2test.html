@@ -1,0 +1,17 @@
+---
+layout: default
+js: test
+permalink: /week2test/
+---
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#div1").load("http://content.guardianapis.com/search?api-key=test&show-fields=football");
+    });
+});
+</script>
+<body>
+<div id="div1"><h2>Guardian</h2></div>
+
+<button>Yo</button>
+</body>
