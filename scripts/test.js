@@ -8,7 +8,7 @@ $.ajax({
         for (var i = 0; i < data.response.results.length; i++) {
         $("#uk-news").append(data.response.results[i].webTitle + "'>Link</a></div>");
             }
-            console.log(data);
+            console.log(dataa);
         }
     });
  });​
