@@ -1,17 +1,44 @@
----
-layout: default
-js: test
-permalink: /week2test/
----
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'></script>
+</head>
+
 <script>
 $(document).ready(function(){
-    $("button").click(function(){
-        $("#div1").load("http://content.guardianapis.com/search?api-key=test&show-fields=football");
+    $.getJSON("http://content.guardianapis.com/search?api-key=test&show-fields=football", function(data){
+    	for (i=0; i<10 ;i++) {
+$("#a").append('<li>Pages: '+ data.response.results[i].webTitle + '</li>')
+    	console.log(data);
+    }
     });
-});
-</script>
-<body>
-<div id="div1"><h2>Guardian</h2></div>
 
-<button>hello</button>
-</body>
+});
+$.ajax({
+	url: "http://content.guardianapis.com/search?api-key=test&show-fields=football",
+	type: "GET",
+	data: "response",
+	success: function(d) {
+
+		console.log(d);
+	}
+});
+
+</script>
+
+  <body>
+
+   <div id="div1">
+   <h2>Guardian</h2>
+   <ul id="a">
+   <li id="b">
+   </div>
+
+  </body>
+</html>
