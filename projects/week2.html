@@ -13,10 +13,19 @@ title: News Feed
   <div class='row'>
     <div class='text-center'>
       <h2>Guardian API News Feed</h2>
-      <p>A resposive tab based news feed which pulls current stories from the Guardian.</p>
+      <p>A responsive tab based news feed which pulls current stories from the Guardian.</p>
       <br/>
       <br/>
     </div>
+  </div>
+  <div class='row'>
+    <div class='text-center'>
+      <h3>Options</h3>
+      <select id='sections'></select>
+      <br/>
+      <br/>
+    </div>
+  </div>
   <div class='row'>
     <div class='col-md-12'>
        <div role='tabpanel'>
@@ -42,9 +51,6 @@ title: News Feed
                 </div>
                 <div id="collapseOne-uk-news" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="uk-news1">
                   <div class="panel-body" id="uk-news-trail1">
-                    <button type="button" class="btn btn-default fullText">
-                    Full Text
-                    </button>
                   </div>
                 </div>
               </div>
@@ -229,6 +235,10 @@ title: News Feed
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-12' id='current-story'>
     </div>
   </div>
 </div>

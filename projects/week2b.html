@@ -1,0 +1,52 @@
+---
+layout: default
+js: api3
+permalink: /week2b/
+title: News Feed
+# ideas for the news feed:
+# add your own tabs, list of valid sections(from api), ajax suggestions/autocomplete?, drop full story in div below on button click/automatically
+# USE JQUERY TO GENERATE ALL THE BOOTSTRAP HTML!!!!
+---
+
+
+<div class='container'>
+  <div class='row'>
+    <div class='text-center'>
+      <h2>Guardian API News Feed</h2>
+      <p>A responsive tab based news feed which pulls current stories from the Guardian.</p>
+      <br/>
+      <br/>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='text-center'>
+      <h3>Options</h3>
+
+        <select id='sections'></select>
+        <br/>
+        <button id='add-tab'>Add Tab</button>
+
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-12'>
+       <div role='tabpanel' id='tabs'>
+
+        <!-- Nav tabs -->
+        <ul class='nav nav-tabs' role='tablist' id='tab-headers'>
+
+        </ul>
+
+        <!-- Tab panes -->
+        <div class='tab-content' id='tab-bodies'>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='text-center' id='current-story'>
+    </div>
+  </div>
+</div>
