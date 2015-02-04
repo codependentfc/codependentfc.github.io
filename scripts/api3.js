@@ -78,7 +78,11 @@ $(document).ready(function() {
       });
     }
   });
-  // $('.panel-heading').click(function(){
+
+});
+
+// Vestigal code accessing story body.
+// $('.panel-heading').click(function(){
   //   var thisSection;
   //   var thisStory;
   //   var thisId = $(this).attr('id');
@@ -88,5 +92,3 @@ $(document).ready(function() {
   //   console.log(thisBody);
   //   $('#current-story').html(thisBody);
   // });
-});
-
