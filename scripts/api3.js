@@ -1,9 +1,8 @@
 $(document).ready(function() {
-  // var searchTerms = ['uk-news', 'travel', 'football'];
-
+  //  TODO check if section is empty, i.e. no stories. Maybe when you try and add it?
   var sectionRequest = 'http://content.guardianapis.com/sections?api-key=yht9jzt3ccngxwgyknvfaj89';
 
-  var allBodies = {};
+  // var allBodies = {};
 
   $.getJSON(sectionRequest)
   .done(function(data) {
@@ -21,62 +20,64 @@ $(document).ready(function() {
   });
 
   $('#add-tab').click(function(){
-    var newSection = $('#sections').val()
-    // console.log(newSection);
-    //TODO make only first tab 'active'?
-    // use section NAME for tab header
-    $('#tab-headers').append("<li role='presentation' class='active'><a href='#"+newSection+"' aria-controls='"+newSection+"' role='tab' data-toggle='tab'>"+newSection+"</a></li>");
-    $('#tab-bodies').append("<div role='tabpanel' class='tab-pane active' id='"+newSection+"'><div class='panel-group' id='accordion-"+newSection+"' role='tablist' aria-multiselectable='true'></div></div>");
+    var newSection = $('#sections').val();
+    //TODO use section NAME for tab header
 
-    var request = ['http://content.guardianapis.com/search?section=', null, '&order-by=newest&show-fields=body%2CtrailText&page-size=5&api-key=yht9jzt3ccngxwgyknvfaj89'];
-    request[1] = newSection;
-    thisRequest = request.join('');
+    if ( $('.tab-header').size() >= 5 ) {
+      alert('Sorry, max 5 tabs');
+    }
+    else {
+      var request = ['http://content.guardianapis.com/search?section=', null, '&order-by=newest&show-fields=body%2CtrailText&page-size=5&api-key=yht9jzt3ccngxwgyknvfaj89'];
+      request[1] = newSection;
+      thisRequest = request.join('');
 
-    allBodies[newSection] = [];
+      // allBodies[newSection] = [];
+      var titles = [];
+      var urls = [];
+      var trails = [];
 
-    var titles = [];
-    var urls = [];
-    var trails = [];
-
-    $.getJSON(thisRequest)
-    .done(function(data) {
-      $.each(data.response.results, function (ind, val) {
-        titles.push(val.webTitle);
-        urls.push(val.webUrl);
-        trails.push(val.fields.trailText);
-        allBodies[newSection].push(val.fields.body);
-        // console.log(allBodies);
+      $.getJSON(thisRequest)
+      .done(function(data) {
+        if (data.response.total === 0) {
+          alert('Sorry, No stories in this category');
+        }
+        else if ( $('#'+newSection+'tab').length) {
+          alert('This section has already been added');
+        }
+        else {
+          $('#tab-headers').append("<li class='tab-header' role='presentation'><a href='#"+newSection+"' id='"+newSection+"tab' aria-controls='"+newSection+"' role='tab' data-toggle='tab'>"+newSection+"</a></li>");
+          $('#tab-bodies').append("<div role='tabpanel' class='tab-pane active' id='"+newSection+"'><div class='panel-group' id='accordion-"+newSection+"' role='tablist' aria-multiselectable='true'></div></div>");
+          $('#'+newSection+'tab').trigger('click');
+          $.each(data.response.results, function (ind, val) {
+            titles.push(val.webTitle);
+            urls.push(val.webUrl);
+            trails.push(val.fields.trailText);
+            // allBodies[newSection].push(val.fields.body);
+            // console.log(allBodies);
+          });
+          $.each(titles, function (ind, val) {
+            $('#accordion-'+newSection).append("<div class='panel panel-default'>" +
+                                              "<div class='panel-heading' role='tab' id='"+newSection+ind+"'>" +
+                                              "<h4 class='panel-title'>" +
+                                              "<a data-toggle='collapse' data-parent='#accordion-"+newSection+"' href='#collapse"+ind+newSection+"' aria-expanded='false' aria-controls='collapse"+ind+newSection+"' id='"+newSection+"-title"+ind+"'>" +
+                                              "</a>" +
+                                              "</h4>" +
+                                              "</div>" +
+                                              "<div id='collapse"+ind+newSection+"' class='panel-collapse collapse' role='tabpanel' aria-labelledby='"+newSection+ind+"'>" +
+                                              "<div class='panel-body' id='"+newSection+"-trail"+ind+"'>" +
+                                              "</div>" +
+                                              "</div>" +
+                                              "</div>");
+            $('#'+newSection+'-title'+ind).append(val);
+            $('#'+newSection+'-trail'+ind).append('<a href="'+urls[ind]+'">'+trails[ind]+'</a>');
+          });
+        }
+      })
+      .fail(function() {
+      alert('Error Contacting Server');
       });
-      $.each(titles, function (ind, val) {
-        $('#accordion-'+newSection).append("<div class='panel panel-default'>" +
-                                          "<div class='panel-heading' role='tab' id='"+newSection+ind+"'>" +
-                                          "<h4 class='panel-title'>" +
-                                          "<a data-toggle='collapse' data-parent='#accordion-"+newSection+"' href='#collapse"+ind+newSection+"' aria-expanded='false' aria-controls='collapse"+ind+newSection+"' id='"+newSection+"-title"+ind+"'>" +
-                                          "</a>" +
-                                          "</h4>" +
-                                          "</div>" +
-                                          "<div id='collapse"+ind+newSection+"' class='panel-collapse collapse in' role='tabpanel' aria-labelledby='"+newSection+ind+"'>" +
-                                          "<div class='panel-body' id='"+newSection+"-trail"+ind+"'>" +
-                                          "</div>" +
-                                          "</div>" +
-                                          "</div>");
-        $('#'+newSection+'-title'+ind).append(val);
-        $('#'+newSection+'-trail'+ind).append('<a href="'+urls[ind]+'">'+trails[ind]+'</a>');
-      });
-    })
-    .fail(function() {
-
-      // ( '#'+ searchVal+'-title1' ).append('<p>Error contacting server</p>');
-    });
-
-
-    $('#'+newSection).append();
-
-
+    }
   });
-
-
-/
   // $('.panel-heading').click(function(){
   //   var thisSection;
   //   var thisStory;
