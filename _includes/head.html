@@ -13,9 +13,15 @@
   <link rel='alternate' type='application/rss+xml' title='{{ site.title }}' href='{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}' />
 
   <link rel='stylesheet' type='text/css' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css'>
+  
+  {% unless page.css == 'week2maj' %}
   <link rel='stylesheet' href='{{ '/css/main.css' | prepend: site.baseurl }}'>
+  {% endunless %}
   {% if page.css == 'profile' %}
     <link rel='stylesheet' type='text/css' href='/css/profile.css'>
+  {% endif %}
+  {% if page.css == 'week2maj' %}
+    <link rel='stylesheet' type='text/css' href='/css/week2maj.css'>
   {% endif %}
 
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'></script>
