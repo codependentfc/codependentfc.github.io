@@ -8,13 +8,46 @@
   <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js'></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="../scripts/week2maj.js"></script>
+  <link rel='stylesheet' type='text/css' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css'>
   <link rel='stylesheet' href="../css/week2maj.css">
 </head>
 
   <body>
    <img src="../media/theguardian.png" id="banner">
-   <ul id="uknews"></ul>
-   <ul id="sport"></ul>
-   <ul id="travel"></ul>
+   <br>
+   <br>
+
+    <ul class="nav nav-tabs">
+       <div role='tabpanel'>
+
+        <!-- Nav tabs -->
+        <ul class='nav nav-tabs' role='tablist'>
+          <li role='presentation' class='active'><a href='#uk-news' aria-controls='uk-news' role='tab' data-toggle='tab'>UK News</a></li>
+          <li role='presentation'><a href='#travel' aria-controls='travel' role='tab' data-toggle='tab'>Travel</a></li>
+          <li role='presentation'><a href='#football' aria-controls='football' role='tab' data-toggle='tab'>Football</a></li>
+        </ul>
+
+         <!-- <div class='tab-content'> -->
+            <!-- <div lass='tab-pane active' id='uknews'></div>
+            <div class='tab-pane active' id='sport'></div>
+            <div class='tab-pane active' id='travel'></div>
+         </div> 
+ -->
+
+
+
+
+      <li role="presentation" class="active">
+        <a href="#">UK News</a><ul id="uknews"></ul>
+      </li>
+      <li role="presentation" class="active">
+        <a href="#">Sport</a><ul id="sport"></ul>
+      </li>
+      <li role="presentation" class="active">
+        <a href="#">Travel</a><ul id="travel"></ul>
+      </li>
+    </ul>
+
+
 </body>
 </html>
