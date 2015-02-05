@@ -13,7 +13,7 @@
   <link rel='alternate' type='application/rss+xml' title='{{ site.title }}' href='{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}' />
 
   <link rel='stylesheet' type='text/css' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css'>
-  
+
   {% unless page.css == 'week2maj' %}
   <link rel='stylesheet' href='{{ '/css/main.css' | prepend: site.baseurl }}'>
   {% endunless %}
@@ -35,13 +35,9 @@
   {% if page.js == 'main' %}
     <script src='/scripts/main.js'></script>
   {% endif %}
-  {% if page.js == 'api' %}
-    <script src='/scripts/api2.js'></script>
-  {% elsif page.js == 'api3' %}
-    <script src='/scripts/api3.js'></script>
+  {% if page.js == 'guardian' %}
+    <script src='/scripts/guardian.js'></script>
   {% endif %}
-  {% if page.js == 'api-exp' %}
-    <script src='/scripts/api-exp.js'></script>
-  {% endif %}
+
 
 </head>

@@ -1,8 +1,6 @@
 // TODO //
 /////////
-// Put initial tab in place on load
-// Fix current story error
-// REFACTOR...
+// Search bar
 
 
 $(document).ready(function() {
@@ -166,22 +164,20 @@ $(document).ready(function() {
     getStories(newSection);
   });
 
-  // TODO find source of error on first click
   $(document).on('click', 'h4 a', function(){
     var thisStory = $(this).text();
-    var catClass = $(this).attr('class');
-    catClass = catClass.substr(0,catClass.indexOf(' '));
+    var catClass = $(this).parent().parent().attr('id');
+    catClass = catClass.slice(0,-1);
     console.log(thisStory);
     console.log(catClass);
     $('#current-story-body').html(allBodies[catClass][thisStory]);
   });
 
-  // call first on page load
+  // call on page load
   getSections();
   newSection = 'uk-news';
   currentPages['uk-news'] = 1;
   allBodies['uk-news'] = {};
   getStories('uk-news');
-
 
 });

@@ -1,11 +1,8 @@
 ---
 layout: default
-js: api
+js: guardian
 permalink: /week2/
 title: News Feed
-# ideas for the news feed:
-# add your own tabs, list of valid sections(from api), ajax suggestions/autocomplete?, drop full story in div below on button click/automatically
-# USE JQUERY TO GENERATE ALL THE BOOTSTRAP HTML!!!!
 ---
 
 
@@ -18,227 +15,59 @@ title: News Feed
       <br/>
     </div>
   </div>
+  <!-- Control Panel -->
   <div class='row'>
-    <div class='text-center'>
-      <h3>Options</h3>
+    <div class='col-md-2'></div>
+    <div class='col-md-4'>
+      <h3>Topic Select</h3>
       <select id='sections'></select>
-      <br/>
-      <br/>
+        <br/>
+      <button id='add-tab' data-loading-text='Loading' class='btn btn-primary' autocomplete='off'>Add Topic</button>
+    </div>
+    <div class='col-md-4'>
+      <h3>Current Topic</h3>
+      <button id='del-tab' data-loading-text='Loading' class='btn btn-primary' autocomplete='off'>Remove</button>
+      <button id='refresh-tab' data-loading-text='Loading' class='btn btn-primary' autocomplete='off'>Refresh</button>
+      <button id='next-page' data-loading-text='Loading' class='btn btn-primary' autocomplete='off'>More</button>
     </div>
   </div>
+
   <div class='row'>
-    <div class='col-md-12'>
-       <div role='tabpanel'>
+    <div class='col-md-2'></div>
+    <div class='col-md-8'>
+       <div role='tabpanel' id='tabs'>
 
         <!-- Nav tabs -->
-        <ul class='nav nav-tabs' role='tablist'>
-          <li role='presentation' class='active'><a href='#uk-news' aria-controls='uk-news' role='tab' data-toggle='tab'>UK News</a></li>
-          <li role='presentation'><a href='#travel' aria-controls='travel' role='tab' data-toggle='tab'>Travel</a></li>
-          <li role='presentation'><a href='#football' aria-controls='football' role='tab' data-toggle='tab'>Football</a></li>
+        <ul class='nav nav-tabs' role='tablist' id='tab-headers'>
+
         </ul>
 
         <!-- Tab panes -->
-        <div class='tab-content'>
+        <div class='tab-content' id='tab-bodies'>
 
-          <div role='tabpanel' class='tab-pane active' id='uk-news'>
-            <div class="panel-group" id="accordion-uk-news" role="tablist" aria-multiselectable="true">
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="uk-news1">
-                  <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion-uk-news" href="#collapseOne-uk-news" aria-expanded="true" aria-controls="collapseOne-uk-news" id="uk-news-title1">
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseOne-uk-news" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="uk-news1">
-                  <div class="panel-body" id="uk-news-trail1">
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="uk-news2">
-                  <h4 class="panel-title">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion-uk-news" href="#collapseTwo-uk-news" aria-expanded="false" aria-controls="collapseTwo-uk-news" id="uk-news-title2">
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseTwo-uk-news" class="panel-collapse collapse" role="tabpanel" aria-labelledby="uk-news2">
-                  <div class="panel-body" id="uk-news-trail2">
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="uk-news3">
-                  <h4 class="panel-title">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion-uk-news" href="#collapseThree-uk-news" aria-expanded="false" aria-controls="collapseThree-uk-news" id="uk-news-title3">
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseThree-uk-news" class="panel-collapse collapse" role="tabpanel" aria-labelledby="uk-news3">
-                  <div class="panel-body" id="uk-news-trail3">
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="uk-news4">
-                  <h4 class="panel-title">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion-uk-news" href="#collapseFour-uk-news" aria-expanded="false" aria-controls="collapseFour-uk-news" id="uk-news-title4">
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseFour-uk-news" class="panel-collapse collapse" role="tabpanel" aria-labelledby="uk-news4">
-                  <div class="panel-body" id="uk-news-trail4">
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="uk-news5">
-                  <h4 class="panel-title">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion-uk-news" href="#collapseFive-uk-news" aria-expanded="false" aria-controls="collapseFive-uk-news" id="uk-news-title5">
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseFive-uk-news" class="panel-collapse collapse" role="tabpanel" aria-labelledby="uk-news5">
-                  <div class="panel-body" id="uk-news-trail5">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div role='tabpanel' class='tab-pane' id='travel'>
-            <div class="panel-group" id="accordion-travel" role="tablist" aria-multiselectable="true">
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="travel1">
-                  <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion-travel" href="#collapseOne-travel" aria-expanded="true" aria-controls="collapseOne--travel" id="travel-title1">
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseOne-travel" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="travel1">
-                  <div class="panel-body" id="travel-trail1">
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="travel2">
-                  <h4 class="panel-title">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion-travel" href="#collapseTwo-travel" aria-expanded="false" aria-controls="collapseTwo-travel" id="travel-title2">
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseTwo-travel" class="panel-collapse collapse" role="tabpanel" aria-labelledby="travel2">
-                  <div class="panel-body" id="travel-trail2">
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="travel3">
-                  <h4 class="panel-title">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion-travel" href="#collapseThree-travel" aria-expanded="false" aria-controls="collapseThree-travel" id="travel-title3">
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseThree-travel" class="panel-collapse collapse" role="tabpanel" aria-labelledby="travel3">
-                  <div class="panel-body" id="travel-trail3">
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="travel4">
-                  <h4 class="panel-title">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion-travel" href="#collapseFour-travel" aria-expanded="false" aria-controls="collapseFour-travel" id="travel-title4">
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseFour-travel" class="panel-collapse collapse" role="tabpanel" aria-labelledby="travel4">
-                  <div class="panel-body" id="travel-trail4">
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="travel5">
-                  <h4 class="panel-title">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion-travel" href="#collapseFive-travel" aria-expanded="false" aria-controls="collapseFive-travel" id="travel-title5">
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseFive-travel" class="panel-collapse collapse" role="tabpanel" aria-labelledby="travel5">
-                  <div class="panel-body" id="travel-trail5">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div role='tabpanel' class='tab-pane' id='football'>
-            <div class="panel-group" id="accordion-football" role="tablist" aria-multiselectable="true">
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="football1">
-                  <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion-football" href="#collapseOne-football" aria-expanded="true" aria-controls="collapseOne-football" id="football-title1">
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseOne-football" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="football1">
-                  <div class="panel-body" id="football-trail1">
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="football2">
-                  <h4 class="panel-title">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion-football" href="#collapseTwo-football" aria-expanded="false" aria-controls="collapseTwo-football" id="football-title2">
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseTwo-football" class="panel-collapse collapse" role="tabpanel" aria-labelledby="football2">
-                  <div class="panel-body" id="football-trail2">
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="football3">
-                  <h4 class="panel-title">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion-football" href="#collapseThree-football" aria-expanded="false" aria-controls="collapseThree-football" id="football-title3">
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseThree-football" class="panel-collapse collapse" role="tabpanel" aria-labelledby="football3">
-                  <div class="panel-body" id="football-trail3">
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="football4">
-                  <h4 class="panel-title">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion-football" href="#collapseFour-football" aria-expanded="false" aria-controls="collapseFour-football" id="football-title4">
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseFour-football" class="panel-collapse collapse" role="tabpanel" aria-labelledby="football4">
-                  <div class="panel-body" id="football-trail4">
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="football5">
-                  <h4 class="panel-title">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion-football" href="#collapseFive-football" aria-expanded="false" aria-controls="collapseFive-football" id="football-title5">
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseFive-football" class="panel-collapse collapse" role="tabpanel" aria-labelledby="football5">
-                  <div class="panel-body" id="football-trail5">
-                  </div>
-                </div>
-            </div>
-          </div>
         </div>
+
       </div>
     </div>
   </div>
   <div class='row'>
-    <div class='col-md-12' id='current-story'>
-    </div>
+    <div class='col-md-2'></div>
+    <div class='col-md-8'>
+      <div class="panel-group" id="current-story" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="current-story-heading">
+            <h3 class="panel-title">
+              <a data-toggle="collapse" data-parent="#current-story" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Full Story Text
+              </a>
+            </h3>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="current-story-heading">
+            <div class="panel-body" id='current-story-body'>
+            Full Story Here
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 </div>
