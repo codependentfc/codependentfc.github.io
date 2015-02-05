@@ -12,3 +12,23 @@ body {
 li {
 	list-style: decimal;
 }
+
+#uk-news {
+	color: ;
+}
+
+.uk-news {
+	color: #D61D00;
+}
+
+.sport {
+	color: #008000;
+}
+
+.travel {
+	color: #066EC9;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+	color: black;
+}
