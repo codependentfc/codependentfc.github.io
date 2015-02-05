@@ -15,6 +15,7 @@ $(document).ready(function() {
   var sectionNames = [];
   var newSection;
   var thisRequest;
+  var thisSection;
   var dataObject;
   var titles = [];
   var urls = [];
@@ -105,7 +106,7 @@ $(document).ready(function() {
       alert('This section has already been added');
     }
     else {
-      $('#tab-headers').append("<li class='"+newSection+" tab-header' role='presentation'><a href='#"+newSection+"' id='"+newSection+"tab' aria-controls='"+newSection+"' role='tab' data-toggle='tab'>"+sectionAssoc[newSection]+"</a></li>");
+      $('#tab-headers').append("<li class='"+newSection+" tab-header' role='presentation'><a href='#"+newSection+"' class='tab-name' id='"+newSection+"tab' aria-controls='"+newSection+"' role='tab' data-toggle='tab'>"+sectionAssoc[newSection]+"</a></li>");
       $('#tab-bodies').append("<div role='tabpanel' class='tab-pane active' id='"+newSection+"'><div class='panel-group' id='accordion-"+newSection+"' role='tablist' aria-multiselectable='true'></div></div>");
       $('#'+newSection+'tab').trigger('click');
       titles = [];
@@ -136,6 +137,10 @@ $(document).ready(function() {
     }
   }
 
+  function pageNum(section) {
+    $('#page-num').text(currentPages[section]);
+  }
+
   // Add New Tab
   // fail if 4 tabs already
 
@@ -148,6 +153,8 @@ $(document).ready(function() {
       currentPages[newSection] = 1;
       allBodies[newSection] = {};
       getStories();
+      pageNum(newSection);
+      $('#'+newSection+'tab').trigger('click');
     }
   });
 
@@ -185,6 +192,8 @@ $(document).ready(function() {
     currentPages[newSection] = 1;
     allBodies[newSection] = {};
     getStories(newSection);
+    pageNum(newSection);
+    $('#'+newSection+'tab').trigger('click');
   });
 
   // More Stories
@@ -203,6 +212,7 @@ $(document).ready(function() {
     currentPages[newSection] += 1;
     allBodies[newSection] = {};
     getStories(newSection);
+    pageNum(newSection);
     $('#'+newSection+'tab').trigger('click');
   });
 
@@ -215,6 +225,12 @@ $(document).ready(function() {
     console.log(thisStory);
     console.log(catClass);
     $('#current-story-body').html(allBodies[catClass][thisStory]);
+  });
+
+  $(document).on('click','.tab-name', function(){
+    thisSection = $(this).attr('id');
+    thisSection = thisSection.slice(0,-3);
+    pageNum(thisSection);
   });
 
   // Initial page population
