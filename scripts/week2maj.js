@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $.getJSON("http://content.guardianapis.com/search?section=uk-news&api-key=test", function(data){
     for (i=0; i<10 ;i++) {
-  $("#uk-news").append('<li>'+ '<a href=' + data.response.results[i].webUrl + '>' + data.response.results[i].webTitle + '</a>' + '</li>')
+  $("#uk-news").append('<li>'+ '<a target="myiframe" href=' + data.response.results[i].webUrl + '>' + data.response.results[i].webTitle + '</a>' + '</li>')
     console.log(data);
     }
   });
