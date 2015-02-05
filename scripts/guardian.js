@@ -20,6 +20,8 @@ $(document).ready(function() {
   var urls = [];
   var trails = [];
   var autocompleteArray = [];
+  var dropdownState = 'closed';
+  var helpState = 'off';
 
   // Get Section names
   // Populate sectionAssoc object for Id/Name lookup
@@ -226,6 +228,8 @@ $(document).ready(function() {
     $('#current-story-body').html(allBodies[catClass][thisStory]);
   });
 
+  // Display pagenum for active tab
+
   $(document).on('click','.tab-name', function(){
     thisSection = $(this).attr('id');
     thisSection = thisSection.slice(0,-3);
@@ -252,8 +256,20 @@ $(document).ready(function() {
   // Sections dropdown toggle
 
   $('#show-list').click(function(){
+    if (dropdownState == 'closed') {
+      $(this).html("<span class='glyphicon glyphicon-menu-up'></span>");
+      dropdownState = 'open';
+    }
+    else {
+      $(this).html("<span class='glyphicon glyphicon-menu-down'></span>");
+      dropdownState = 'closed';
+    }
     $('#sections').toggleClass('hide');
   });
 
-
+  // Activate help popover functionality
+  $('#help-button').click(function(){
+    $(this).toggleClass('active');
+    $('#help-tab').toggleClass('hide');
+  });
 });

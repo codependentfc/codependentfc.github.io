@@ -20,39 +20,69 @@ title: News Feed
   <div class='row control-panel' >
     <div class='col-md-1'></div>
     <div class='col-md-4'>
-      <h3>Select</h3>
+      <h3></h3>
       <input type="text" class="form-control"  name="sectionNames" id="autocomplete"/>
       <select id='sections' class="form-control hide"></select>
     </div>
     <div class='col-md-2'>
-      <h3>Add</h3>
-      <button id='show-list' data-loading-text='Loading' class='btn btn-primary' autocomplete='off'>
+      <h3></h3>
+      <button id='show-list' class='btn btn-primary' autocomplete='off'>
         <span class='glyphicon glyphicon-menu-down'></span>
       </button>
-      <button id='add-tab' data-loading-text='Loading' class='btn btn-primary' autocomplete='off'>
+      <button id='add-tab' class='btn btn-primary' autocomplete='off'>
         <span class='glyphicon glyphicon-plus'></span>
       </button>
     </div>
     <div class='col-md-2'>
-      <h3>Page</h3>
+      <h3></h3>
       <button type="button" id='page-num' class="btn btn-default" disabled="disabled">1</button>
-      <button id='next-page' data-loading-text='Loading' class='btn btn-primary' autocomplete='off'>
+      <button id='next-page' class='btn btn-primary' autocomplete='off'>
         <span class='glyphicon glyphicon-forward'></span>
       </button>
     </div>
     <div class='col-md-2'>
-      <h3>Control</h3>
-      <button id='del-tab' data-loading-text='Loading' class='btn btn-primary' autocomplete='off'>
-      <span class='glyphicon glyphicon-trash'></span>
+      <h3></h3>
+      <button id='del-tab' class='btn btn-primary' autocomplete='off'>
+        <span class='glyphicon glyphicon-trash'></span>
       </button>
-      <button id='refresh-tab' data-loading-text='Loading' class='btn btn-primary' autocomplete='off'>
+      <button id='refresh-tab' class='btn btn-primary' autocomplete='off'>
         <span class='glyphicon glyphicon-refresh'></span>
       </button>
-
+      <button type="button" class="btn btn-primary" id='help-button'>
+        <span class='glyphicon glyphicon-question-sign'></span>
+      </button>
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class='col-md-10'>
+      <div id='help-tab' class="alert alert-info text-center hide" role="alert">
+        <h4>Search by news topic, and view the newest stories below</h4>
+        <div class="btn-group" role="group" aria-label="...">
+          <button type="button" class="btn btn-primary"><span class='glyphicon glyphicon-menu-down'></span></button>
+          <button type="button" class="btn btn-default" disabled="disabled">Toggle topic dropdown</button>
+        </div>
+        <div class="btn-group" role="group" aria-label="...">
+          <button type="button" class="btn btn-primary"><span class='glyphicon glyphicon-plus'></span></button>
+          <button type="button" class="btn btn-default" disabled="disabled">Add tab of chosen topic</button>
+        </div>
+        <div class="btn-group" role="group" aria-label="...">
+          <button type="button" class="btn btn-primary"><span class='glyphicon glyphicon-forward'></span></button>
+          <button type="button" class="btn btn-default" disabled="disabled">Load next 5 stories for current tab</button>
+        </div>
+        <div class="btn-group" role="group" aria-label="...">
+          <button type="button" class="btn btn-primary"><span class='glyphicon glyphicon-trash'></span></button>
+          <button type="button" class="btn btn-default" disabled="disabled">Delete current tab</button>
+        </div>
+        <div class="btn-group" role="group" aria-label="...">
+          <button type="button" class="btn btn-primary"><span class='glyphicon glyphicon-refresh'></span></button>
+          <button type="button" class="btn btn-default" disabled="disabled">Refresh current tab</button>
+        </div>
 
+      </div>
+    </div>
+  </div>
 
   <div class='row'>
     <div class='col-md-1'></div>
@@ -80,13 +110,12 @@ title: News Feed
           <div class="panel-heading" role="tab" id="current-story-heading">
             <h3 class="panel-title">
               <a data-toggle="collapse" data-parent="#current-story" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Full Story Text
+                Selected Story
               </a>
             </h3>
           </div>
-          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="current-story-heading">
+          <div id="collapseOne" class="panel-collapse collapse in text-left" role="tabpanel" aria-labelledby="current-story-heading">
             <div class="panel-body" id='current-story-body'>
-              Click a headline above.
             </div>
           </div>
         </div>
