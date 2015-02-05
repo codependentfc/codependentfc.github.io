@@ -249,6 +249,8 @@ $(document).ready(function() {
     }
   });
 
+  // Sections dropdown toggle
+
   $('#show-list').click(function(){
     $('#sections').toggleClass('hide');
   });
