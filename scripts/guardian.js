@@ -1,7 +1,6 @@
 // TODO //
 /////////
-// Search bar
-
+// Tab dissapears if next page ajax fails.
 
 $(document).ready(function() {
 
@@ -249,5 +248,10 @@ $(document).ready(function() {
       $('option[value='+suggestion.data+']').prop('selected', true);
     }
   });
+
+  $('#show-list').click(function(){
+    $('#sections').toggleClass('hide');
+  });
+
 
 });
