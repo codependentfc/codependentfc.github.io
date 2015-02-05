@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $.getJSON("http://content.guardianapis.com/search?show-fields=trailText&q=section=uk-news&api-key=test", function(data){
     for (i=0; i<10 ;i++) {
-  $("#uk-news").append('<li><a data-toggle="tooltip" title="' + data.response.results[i].fields.trailText + '" href="' + data.response.results[i].webUrl + '"">' + data.response.results[i].webTitle + '</a>' + '</li>')
+  $("#uk-news").append('<li><a data-toggle="tooltip" title="' + data.response.results[i].fields.trailText + '" href="' + data.response.results[i].webUrl + '" target="myiframe">' + data.response.results[i].webTitle + '</a>' + '</li>')
     console.log(data);
     }
   });
