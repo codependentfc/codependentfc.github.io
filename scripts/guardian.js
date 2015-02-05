@@ -5,6 +5,7 @@
 
 $(document).ready(function() {
 
+  // Declare all variables before use
   var sectionRequest = 'http://content.guardianapis.com/sections?api-key=yht9jzt3ccngxwgyknvfaj89';
   var request = ['http://content.guardianapis.com/search?section=', null, '&page=', null ,'&order-by=newest&show-fields=body%2CtrailText&page-size=5&api-key=yht9jzt3ccngxwgyknvfaj89'];
   var allBodies = {};
@@ -18,8 +19,11 @@ $(document).ready(function() {
   var titles = [];
   var urls = [];
   var trails = [];
+  var autocompleteArray = [];
 
   // Get Section names
+  // Populate sectionAssoc object for Id/Name lookup
+  // Populate autocompleteArray for autocomplete field (requiers a specific structure)
 
   function getSections() {
     $.getJSON(sectionRequest)
@@ -31,12 +35,32 @@ $(document).ready(function() {
       $.each(sectionIds, function (ind, val){
         sectionAssoc[val] = sectionNames[ind];
       });
+      $.each(sectionAssoc, function (key, val){
+        autocompleteArray.push({ value: val, data: key});
+      });
       sectionIds.sort();
       populateSections();
     })
     .fail(function(){
       alert('Error Contacting Server - Section Name Request');
     });
+    // empty result check
+    // NON FUNCTIONAL
+    // $.each(sectionIds, function (ind, val){
+    //   request[1] = val;
+    //   request[3] = 1;
+    //   thisRequest = request.join('');
+    //   $.getJSON(thisRequest)
+    //   .done(function(data) {
+    //     if (data.response.total === 0) {
+    //       emptySections.push(val);
+    //       console.log(emptySections);
+    //     }
+    //   })
+    //   .fail(function(){
+    //     alert('Error Contacting Server - Empty Section Test');
+    //   });
+    // });
   }
 
   // Populate options dropdown
@@ -53,6 +77,7 @@ $(document).ready(function() {
   }
 
   // Get Stories
+  // Use search term and current page to complete query URL
 
   function getStories(section) {
     newSection = section || $('#sections').val();
@@ -68,6 +93,9 @@ $(document).ready(function() {
       alert('Error Contacting Server');
     });
   }
+
+  // Write HTML to page, populated with data from API query
+  // Fail if no stories in section or if tab for section already exists
 
   function populateStories() {
     if (dataObject.response.total === 0) {
@@ -108,9 +136,12 @@ $(document).ready(function() {
     }
   }
 
+  // Add New Tab
+  // fail if 4 tabs already
+
   $(document).on('click', '#add-tab', function(){
-    if ( $('.tab-header').size() >= 5 ) {
-      alert('Sorry, max 5 tabs');
+    if ( $('.tab-header').size() >= 4 ) {
+      alert('Sorry, max 4 tabs');
     }
     else {
       newSection = $('#sections').val();
@@ -120,6 +151,9 @@ $(document).ready(function() {
     }
   });
 
+  // Delete Active Tab
+  // fail if only 1 tab
+  // clear current pages for section by grabbing delId from HTML
 
   $('#del-tab').click(function(){
     if ($('.tab-header').size() < 2) {
@@ -129,10 +163,14 @@ $(document).ready(function() {
       var delId = $('.tab-header.active').attr('class');
       delId = delId.substr(0,delId.indexOf(' '));
       delete currentPages[delId];
+      delete allBodies[delId];
       $('.active').remove();
       $('.tab-header :first').trigger('click');
+      console.log(allBodies);
     }
   });
+
+  // Reload Current Tab
 
   $('#refresh-tab').click(function(){
     var refreshId = $('.tab-header.active').attr('class');
@@ -149,6 +187,9 @@ $(document).ready(function() {
     getStories(newSection);
   });
 
+  // More Stories
+  // increment page counter for API call and repopulate
+
   $('#next-page').click(function(){
     var nextId = $('.tab-header.active').attr('class');
     nextId = nextId.substr(0,nextId.indexOf(' '));
@@ -164,6 +205,8 @@ $(document).ready(function() {
     getStories(newSection);
   });
 
+  // Display full story text in bottom collapse on header click
+
   $(document).on('click', 'h4 a', function(){
     var thisStory = $(this).text();
     var catClass = $(this).parent().parent().attr('id');
@@ -173,11 +216,21 @@ $(document).ready(function() {
     $('#current-story-body').html(allBodies[catClass][thisStory]);
   });
 
-  // call on page load
+  // Initial page population
+
   getSections();
   newSection = 'uk-news';
   currentPages['uk-news'] = 1;
   allBodies['uk-news'] = {};
   getStories('uk-news');
+
+  // Automplete.js
+
+  $('#autocomplete').autocomplete({
+    lookup: autocompleteArray,
+    onSelect: function (suggestion) {
+      $('option[value='+suggestion.data+']').prop('selected', true);
+    }
+  });
 
 });
