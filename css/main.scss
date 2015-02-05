@@ -10,16 +10,16 @@ html, body {height: 100%;}
 #sticky-body {
   min-height: 100%;
   overflow:auto;
-  padding-bottom: 75px;
+  padding-bottom: 75px; /* must be same height as the footer */
   /*Top padding to bring content out from under fixed nav*/
-  padding-top: 50px;
-}  /* must be same height as the footer */
+  padding-top: 75px; //was 50px!
+}
 
 #sticky-body-home {
   min-height: 100%;
   overflow:auto;
-  padding-bottom: 75px;
-}  /* must be same height as the footer */
+  padding-bottom: 75px; /* must be same height as the footer */
+}
 
 #sticky-footer {
   position: relative;
