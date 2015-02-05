@@ -46,7 +46,7 @@ $(document).ready(function() {
     .fail(function(){
       alert('Error Contacting Server - Section Name Request');
     });
-    // empty result check
+    // draft empty result check
     // NON FUNCTIONAL
     // $.each(sectionIds, function (ind, val){
     //   request[1] = val;
