@@ -3,16 +3,24 @@ layout: default
 js: week2maj
 permalink: /week2maj/
 css: week2maj
+title: News Feed
 ---
   <body>
    <img src="../media/theguardian.png" id="banner">
    <br>
    <br>
+   <div class="col-md-8">
+    <iframe width="100%" height="650px" src="http://www.theguardian.com"></iframe>
+   </div>
+      <div class="col-md-4">
+
+        <div>
           <ul class='nav nav-tabs' role='tablist'>
-            <li role='presentation' class='active'><a href='#uk-news' aria-controls='uk-news' role='tab' data-toggle='tab'>UK News</a></li>
-            <li role='presentation'><a href='#sport' aria-controls='sport' role='tab' data-toggle='tab'>Sport</a></li>
-            <li role='presentation'><a href='#travel' aria-controls='travel' role='tab' data-toggle='tab'>Travel</a></li>
+            <li role='presentation' class='active'><a href='#uk-news' aria-controls='uk-news' role='tab' data-toggle='tab' class="uk-news">UK News</a></li>
+            <li role='presentation'><a href='#sport' aria-controls='sport' role='tab' data-toggle='tab' class="sport">Sport</a></li>
+            <li role='presentation'><a href='#travel' aria-controls='travel' role='tab' data-toggle='tab' class="travel">Travel</a></li>
           </ul>
+        </div>
           <div class='tab-content'>
             <div class='tab-pane active' id='uk-news'>
               <ol role="presentation" class="active">
@@ -29,6 +37,7 @@ css: week2maj
                 <ol id="travel"></ol>
               </ol>
             </div>
-          </div> 
+          </div>
+        </div>
 </body>
 </html>

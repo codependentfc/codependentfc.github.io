@@ -9,6 +9,46 @@ body {
 	width:50%;
 }
 
-li {
+#uk-news li {
 	list-style: decimal;
+}
+
+#sport li {
+	list-style: decimal;
+}
+
+#travel li {
+	list-style: decimal;
+}
+
+#uk-news {
+	color: ;
+}
+
+.nav {
+  font-family: Consolas;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.uk-news {
+	color: #D61D00 !important;
+	font-family: "Guardian Egyptian Web","Guardian Text Egyptian Web",Georgia,serif;
+	font-size: 15px;
+	text-transform: none;
+}
+
+.sport {
+	color: #008000 !important;
+	font-family: "Guardian Egyptian Web","Guardian Text Egyptian Web",Georgia,serif;
+	font-size: 15px;
+	text-transform: none;
+}
+
+.travel {
+	color: #066EC9 !important;
+	font-family: "Guardian Egyptian Web","Guardian Text Egyptian Web",Georgia,serif;
+	font-size: 15px;
+	text-transform: none;
 }
