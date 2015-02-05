@@ -249,11 +249,19 @@ body {
 }
 
 #news-feed-header {
-  margin-left: -50px;
+  // margin-left: -50px;
 }
 
 #add-tab {
   padding: 6px 50px;
+}
+
+#current-story-heading {
+  background-color: #337ab7;
+}
+
+#current-story-heading a {
+  color: white;
 }
 
 // guardian news autocomplete
