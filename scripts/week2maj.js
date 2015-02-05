@@ -21,7 +21,3 @@ $.getJSON("http://content.guardianapis.com/search?section=travel&api-key=test", 
   });
 
 });
-
-$("a.link").on("click",function(){
-              window.open('#uk-news','_blank');
-              });
