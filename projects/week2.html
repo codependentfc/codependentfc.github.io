@@ -6,27 +6,30 @@ title: News Feed
 ---
 
 
-<div class='container'>
+<div class='container' id='news-feed-container'>
   <div class='row'>
-    <div class='text-center'>
-      <h2>Guardian API News Feed</h2>
-      <p>A responsive tab based news feed which pulls current stories from the Guardian.</p>
-      <br/>
-      <br/>
+    <div class='col-md-1'></div>
+    <div class-'col-md-9' id='news-feed-header'>
+      <!-- <img src='/media/theguardian.png'/> -->
+      <h1>Guardian News</h1>
+      <h2>A responsive tab based news feed</h2>
     </div>
   </div>
   <!-- Control Panel -->
-  <div class='row'>
-    <div class='col-md-2'></div>
-    <div class='col-md-4'>
-      <h3>Topic Select</h3>
-      <input type="text" name="sectionNames" id="autocomplete"/>
+  <div class='row control-panel' >
+    <div class='col-md-1'></div>
+    <div class='col-md-3'>
+      <h3>Select</h3>
+      <input type="text" class="form-control"  name="sectionNames" id="autocomplete"/>
       <select id='sections'></select>
-        <br/>
-      <button id='add-tab' data-loading-text='Loading' class='btn btn-primary' autocomplete='off'>Add Topic</button>
     </div>
-    <div class='col-md-4'>
-      <h3>Current Topic</h3>
+    <!-- <div class='col-md-1'></div> -->
+    <div class='col-md-3'>
+      <h3>Add</h3>
+      <button id='add-tab' data-loading-text='Loading' class='btn btn-primary' autocomplete='off'> Add Topic</button>
+    </div>
+    <div class='col-md-3'>
+      <h3>Control</h3>
       <button id='del-tab' data-loading-text='Loading' class='btn btn-primary' autocomplete='off'>Remove</button>
       <button id='refresh-tab' data-loading-text='Loading' class='btn btn-primary' autocomplete='off'>Refresh</button>
       <button id='next-page' data-loading-text='Loading' class='btn btn-primary' autocomplete='off'>More</button>
@@ -34,8 +37,8 @@ title: News Feed
   </div>
 
   <div class='row'>
-    <div class='col-md-2'></div>
-    <div class='col-md-8'>
+    <div class='col-md-1'></div>
+    <div class='col-md-9'>
        <div role='tabpanel' id='tabs'>
 
         <!-- Nav tabs -->
@@ -52,8 +55,8 @@ title: News Feed
     </div>
   </div>
   <div class='row'>
-    <div class='col-md-2'></div>
-    <div class='col-md-8'>
+    <div class='col-md-1'></div>
+    <div class='col-md-9'>
       <div class="panel-group" id="current-story" role="tablist" aria-multiselectable="true">
         <div class="panel panel-default">
           <div class="panel-heading" role="tab" id="current-story-heading">
