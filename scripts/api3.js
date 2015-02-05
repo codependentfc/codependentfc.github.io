@@ -1,8 +1,15 @@
+// TODO //
+/////////
+// Put initial tab in place on load
+// Fix current story error
+// REFACTOR...
+
+
 $(document).ready(function() {
 
   var sectionRequest = 'http://content.guardianapis.com/sections?api-key=yht9jzt3ccngxwgyknvfaj89';
 
-  // var allBodies = {};
+  var allBodies = {};
   var sectionAssoc = {};
 
   var currentPages = {};
@@ -40,7 +47,7 @@ $(document).ready(function() {
       request[1] = newSection;
       thisRequest = request.join('');
 
-      // allBodies[newSection] = [];
+      allBodies[newSection] = {};
       var titles = [];
       var urls = [];
       var trails = [];
@@ -61,14 +68,13 @@ $(document).ready(function() {
             titles.push(val.webTitle);
             urls.push(val.webUrl);
             trails.push(val.fields.trailText);
-            // allBodies[newSection].push(val.fields.body);
-            // console.log(allBodies);
+            allBodies[newSection][val.webTitle] = val.fields.body;
           });
           $.each(titles, function (ind, val) {
             $('#accordion-'+newSection).append("<div class='panel panel-default'>" +
                                               "<div class='panel-heading' role='tab' id='"+newSection+ind+"'>" +
                                               "<h4 class='panel-title'>" +
-                                              "<a data-toggle='collapse' data-parent='#accordion-"+newSection+"' href='#collapse"+ind+newSection+"' aria-expanded='false' aria-controls='collapse"+ind+newSection+"' id='"+newSection+"-title"+ind+"'>" +
+                                              "<a data-toggle='collapse' data-parent='#accordion-"+newSection+"' href='#collapse"+ind+newSection+"' aria-expanded='false' aria-controls='collapse"+ind+newSection+"' class='"+newSection+"' id='"+newSection+"-title"+ind+"'>" +
                                               "</a>" +
                                               "</h4>" +
                                               "</div>" +
@@ -81,6 +87,7 @@ $(document).ready(function() {
             $('#'+newSection+'-trail'+ind).append('<a href="'+urls[ind]+'" target="_blank">'+trails[ind]+'</a>');
           });
         }
+        console.log(allBodies);
       })
       .fail(function() {
       alert('Error Contacting Server');
@@ -89,11 +96,16 @@ $(document).ready(function() {
   });
 
   $('#del-tab').click(function(){
-    var delId = $('.tab-header.active').attr('class');
-    delId = delId.substr(0,delId.indexOf(' '));
-    delete currentPages[delId];
-    $('.active').remove();
-
+    if ($('.tab-header').size() < 2) {
+      alert('Sorry, cannot delete last tab');
+    }
+    else {
+      var delId = $('.tab-header.active').attr('class');
+      delId = delId.substr(0,delId.indexOf(' '));
+      delete currentPages[delId];
+      $('.active').remove();
+      $('.tab-header :first').trigger('click');
+    }
   });
 
   $('#refresh-tab').click(function(){
@@ -101,6 +113,8 @@ $(document).ready(function() {
     refreshId = refreshId.substr(0,refreshId.indexOf(' '));
 
     $('.active').remove();
+
+    delete allBodies[refreshId];
 
     var newSection = refreshId;
 
@@ -113,7 +127,7 @@ $(document).ready(function() {
       request[1] = newSection;
       thisRequest = request.join('');
 
-      // allBodies[newSection] = [];
+      allBodies[newSection] = [];
       var titles = [];
       var urls = [];
       var trails = [];
@@ -134,14 +148,13 @@ $(document).ready(function() {
             titles.push(val.webTitle);
             urls.push(val.webUrl);
             trails.push(val.fields.trailText);
-            // allBodies[newSection].push(val.fields.body);
-            // console.log(allBodies);
+            allBodies[newSection][val.webTitle] = val.fields.body;
           });
           $.each(titles, function (ind, val) {
             $('#accordion-'+newSection).append("<div class='panel panel-default'>" +
                                               "<div class='panel-heading' role='tab' id='"+newSection+ind+"'>" +
                                               "<h4 class='panel-title'>" +
-                                              "<a data-toggle='collapse' data-parent='#accordion-"+newSection+"' href='#collapse"+ind+newSection+"' aria-expanded='false' aria-controls='collapse"+ind+newSection+"' id='"+newSection+"-title"+ind+"'>" +
+                                              "<a data-toggle='collapse' data-parent='#accordion-"+newSection+"' href='#collapse"+ind+newSection+"' aria-expanded='false' aria-controls='collapse"+ind+newSection+"' class='"+newSection+"' id='"+newSection+"-title"+ind+"'>" +
                                               "</a>" +
                                               "</h4>" +
                                               "</div>" +
@@ -167,6 +180,8 @@ $(document).ready(function() {
 
     $('.active').remove();
 
+    delete allBodies[nextId];
+
     var newSection = nextId;
 
     if ( $('.tab-header').size() >= 5 ) {
@@ -178,7 +193,7 @@ $(document).ready(function() {
       request[1] = newSection;
       thisRequest = request.join('');
 
-      // allBodies[newSection] = [];
+      allBodies[newSection] = [];
       var titles = [];
       var urls = [];
       var trails = [];
@@ -199,14 +214,13 @@ $(document).ready(function() {
             titles.push(val.webTitle);
             urls.push(val.webUrl);
             trails.push(val.fields.trailText);
-            // allBodies[newSection].push(val.fields.body);
-            // console.log(allBodies);
+            allBodies[newSection][val.webTitle] = val.fields.body;
           });
           $.each(titles, function (ind, val) {
             $('#accordion-'+newSection).append("<div class='panel panel-default'>" +
                                               "<div class='panel-heading' role='tab' id='"+newSection+ind+"'>" +
                                               "<h4 class='panel-title'>" +
-                                              "<a data-toggle='collapse' data-parent='#accordion-"+newSection+"' href='#collapse"+ind+newSection+"' aria-expanded='false' aria-controls='collapse"+ind+newSection+"' id='"+newSection+"-title"+ind+"'>" +
+                                              "<a data-toggle='collapse' data-parent='#accordion-"+newSection+"' href='#collapse"+ind+newSection+"' aria-expanded='false' aria-controls='collapse"+ind+newSection+"' class='"+newSection+"' id='"+newSection+"-title"+ind+"'>" +
                                               "</a>" +
                                               "</h4>" +
                                               "</div>" +
@@ -226,16 +240,15 @@ $(document).ready(function() {
     }
   });
 
+  // TODO find source of error on first click
+  $(document).on('click', 'h4 a', function(){
+    var thisStory = $(this).text();
+    var catClass = $(this).attr('class');
+    catClass = catClass.substr(0,catClass.indexOf(' '));
+    console.log(thisStory);
+    console.log(catClass);
+    $('#current-story-body').html(allBodies[catClass][thisStory]);
+  });
+
 });
 
-// Vestigal code accessing story body.
-// $('.panel-heading').click(function(){
-  //   var thisSection;
-  //   var thisStory;
-  //   var thisId = $(this).attr('id');
-  //   thisSection = thisId.slice(0,-1);
-  //   thisStory = (thisId.slice(-1))-1;
-  //   var thisBody = allBodies[thisSection][thisStory];
-  //   console.log(thisBody);
-  //   $('#current-story').html(thisBody);
-  // });

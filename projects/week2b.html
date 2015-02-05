@@ -17,20 +17,26 @@ title: News Feed
       <br/>
     </div>
   </div>
+  <!-- Control Panel -->
   <div class='row'>
-    <div class='text-center'>
-      <h3>Options</h3>
-
-        <select id='sections'></select>
+    <div class='col-md-2'></div>
+    <div class='col-md-4'>
+      <h3>Topic Select</h3>
+      <select id='sections'></select>
         <br/>
-        <button id='add-tab'>Add Tab</button>
-        <button id='del-tab'>Remove Tab</button>
-        <button id='refresh-tab'>Refresh Tab</button>
-        <button id='next-page'>Next Page</button>
+      <button id='add-tab' data-loading-text='Loading...' class='btn btn-primary' autocomplete='off'>Add Topic</button>
+    </div>
+    <div class='col-md-4'>
+      <h3>Current Topic</h3>
+      <button id='del-tab' data-loading-text='Loading...' class='btn btn-primary' autocomplete='off'>Remove</button>
+      <button id='refresh-tab' data-loading-text='Loading...' class='btn btn-primary' autocomplete='off'>Refresh</button>
+      <button id='next-page' data-loading-text='Loading...' class='btn btn-primary' autocomplete='off'>More</button>
     </div>
   </div>
+
   <div class='row'>
-    <div class='col-md-12'>
+    <div class='col-md-2'></div>
+    <div class='col-md-8'>
        <div role='tabpanel' id='tabs'>
 
         <!-- Nav tabs -->
@@ -47,7 +53,23 @@ title: News Feed
     </div>
   </div>
   <div class='row'>
-    <div class='text-center' id='current-story'>
-    </div>
+    <div class='col-md-2'></div>
+    <div class='col-md-8'>
+      <div class="panel-group" id="current-story" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="current-story-heading">
+            <h3 class="panel-title">
+              <a data-toggle="collapse" data-parent="#current-story" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Full Story Text
+              </a>
+            </h3>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="current-story-heading">
+            <div class="panel-body" id='current-story-body'>
+            Full Story Here
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 </div>
