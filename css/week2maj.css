@@ -8,3 +8,7 @@ body {
 #banner {
 	width:50%;
 }
+
+li {
+	list-style: square inside url("sq#005689.gif");
+}
