@@ -140,8 +140,8 @@ $(document).ready(function() {
   // fail if 4 tabs already
 
   $(document).on('click', '#add-tab', function(){
-    if ( $('.tab-header').size() >= 4 ) {
-      alert('Sorry, max 4 tabs');
+    if ( $('.tab-header').size() >= 5 ) {
+      alert('Sorry, 5 tabs maximum');
     }
     else {
       newSection = $('#sections').val();
@@ -203,6 +203,7 @@ $(document).ready(function() {
     currentPages[newSection] += 1;
     allBodies[newSection] = {};
     getStories(newSection);
+    $('#'+newSection+'tab').trigger('click');
   });
 
   // Display full story text in bottom collapse on header click

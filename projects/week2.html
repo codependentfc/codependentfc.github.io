@@ -8,11 +8,11 @@ title: News Feed
 
 <div class='container' id='news-feed-container'>
   <div class='row'>
-    <!-- <img src='/media/theguardian.png'/> -->
+    <img class="img-responsive" id='news-feed-banner' src='/media/theguardian.png'/>
   </div>
   <div class='row'>
     <div class='col-md-1'></div>
-    <div class-'col-md-9 text-center' id='news-feed-header'>
+    <div class-'col-md-10 text-center' id='news-feed-header'>
       <h1>Guardian News</h1>
       <h2>A responsive tab based news feed</h2>
     </div>
@@ -20,17 +20,17 @@ title: News Feed
   <!-- Control Panel -->
   <div class='row control-panel' >
     <div class='col-md-1'></div>
-    <div class='col-md-3'>
+    <div class='col-md-4'>
       <h3>Select</h3>
       <input type="text" class="form-control"  name="sectionNames" id="autocomplete"/>
       <select id='sections'></select>
     </div>
     <!-- <div class='col-md-1'></div> -->
-    <div class='col-md-3'>
+    <div class='col-md-2'>
       <h3>Add</h3>
       <button id='add-tab' data-loading-text='Loading' class='btn btn-primary' autocomplete='off'> Add Topic</button>
     </div>
-    <div class='col-md-3'>
+    <div class='col-md-4'>
       <h3>Control</h3>
       <button id='del-tab' data-loading-text='Loading' class='btn btn-primary' autocomplete='off'>Remove</button>
       <button id='refresh-tab' data-loading-text='Loading' class='btn btn-primary' autocomplete='off'>Refresh</button>
@@ -40,7 +40,7 @@ title: News Feed
 
   <div class='row'>
     <div class='col-md-1'></div>
-    <div class='col-md-9'>
+    <div class='col-md-10'>
        <div role='tabpanel' id='tabs'>
 
         <!-- Nav tabs -->
@@ -58,7 +58,7 @@ title: News Feed
   </div>
   <div class='row'>
     <div class='col-md-1'></div>
-    <div class='col-md-9'>
+    <div class='col-md-10'>
       <div class="panel-group" id="current-story" role="tablist" aria-multiselectable="true">
         <div class="panel panel-default">
           <div class="panel-heading" role="tab" id="current-story-heading">

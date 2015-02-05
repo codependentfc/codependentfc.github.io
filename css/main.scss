@@ -236,7 +236,7 @@ body {
 
 // News Feed
 #sections {
-  max-width: 100%;
+  max-width: 80%;
   display: none;
 }
 
@@ -250,10 +250,11 @@ body {
 
 #news-feed-header {
   // margin-left: -50px;
+  text-align: center;
 }
 
 #add-tab {
-  padding: 6px 50px;
+  padding: 6px 40px;
 }
 
 #current-story-heading {
@@ -262,6 +263,12 @@ body {
 
 #current-story-heading a {
   color: white;
+}
+
+#news-feed-banner {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60%;
 }
 
 // guardian news autocomplete
