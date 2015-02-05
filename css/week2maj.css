@@ -18,17 +18,13 @@ li {
 }
 
 .uk-news {
-	color: #D61D00;
+	color: #D61D00 !important;
 }
 
 .sport {
-	color: #008000;
+	color: #008000 !important;
 }
 
 .travel {
-	color: #066EC9;
-}
-
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
-	color: black;
+	color: #066EC9 !important;
 }
