@@ -1,0 +1,127 @@
+---
+layout: default
+js: guardian
+css: guardian
+permalink: /week2/responsive/
+title: News Feed
+---
+
+
+<div class='container' id='news-feed-container'>
+  <div class='row'>
+    <img class="img-responsive" id='news-feed-banner' src='/media/theguardian.png'/>
+  </div>
+  <div class='row'>
+    <div class='col-md-1'></div>
+    <div class-'col-md-10 text-center' id='news-feed-header'>
+      <h1>Responsive News Feed</h1>
+    </div>
+  </div>
+  <!-- Control Panel -->
+  <div class='row control-panel' >
+    <div class='col-md-1'></div>
+    <div class='col-md-4'>
+      <h3></h3>
+      <input type="text" class="form-control"  name="sectionNames" id="autocomplete"/>
+      <select id='sections' class="form-control hide"></select>
+    </div>
+    <div class='col-md-2'>
+      <h3></h3>
+      <button id='show-list' class='btn btn-primary' autocomplete='off'>
+        <span class='glyphicon glyphicon-menu-down'></span>
+      </button>
+      <button id='add-tab' class='btn btn-primary' autocomplete='off'>
+        <span class='glyphicon glyphicon-plus'></span>
+      </button>
+    </div>
+    <div class='col-md-2'>
+      <h3></h3>
+      <button type="button" id='page-num' class="btn btn-default" disabled="disabled">1</button>
+      <button id='next-page' class='btn btn-primary' autocomplete='off'>
+        <span class='glyphicon glyphicon-forward'></span>
+      </button>
+    </div>
+    <div class='col-md-2'>
+      <h3></h3>
+      <button id='del-tab' class='btn btn-primary' autocomplete='off'>
+        <span class='glyphicon glyphicon-trash'></span>
+      </button>
+      <button id='refresh-tab' class='btn btn-primary' autocomplete='off'>
+        <span class='glyphicon glyphicon-refresh'></span>
+      </button>
+      <button type="button" class="btn btn-primary" id='help-button'>
+        <span class='glyphicon glyphicon-question-sign'></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class='col-md-10'>
+      <div id='help-tab' class="alert alert-info text-center hide" role="alert">
+        <h4>Search by news topic - the latest stories load below</h4>
+        <h4>Click headline for trail text, and full story below</h4>
+        <h4>Click trail text to open original article in new tab</h4>
+        <div class="btn-group help-button" role="group" aria-label="...">
+          <button type="button" class="btn btn-primary"><span class='glyphicon glyphicon-menu-down'></span></button>
+          <button type="button" class="btn btn-default" disabled="disabled">Topic list</button>
+        </div>
+        <div class="btn-group help-button" role="group" aria-label="...">
+          <button type="button" class="btn btn-primary"><span class='glyphicon glyphicon-plus'></span></button>
+          <button type="button" class="btn btn-default" disabled="disabled">Add tab</button>
+        </div>
+        <div class="btn-group help-button" role="group" aria-label="...">
+          <button type="button" class="btn btn-primary"><span class='glyphicon glyphicon-forward'></span></button>
+          <button type="button" class="btn btn-default" disabled="disabled">Next 5 stories</button>
+        </div>
+        <div class="btn-group help-button" role="group" aria-label="...">
+          <button type="button" class="btn btn-primary"><span class='glyphicon glyphicon-trash'></span></button>
+          <button type="button" class="btn btn-default" disabled="disabled">Delete current tab</button>
+        </div>
+        <div class="btn-group help-button" role="group" aria-label="...">
+          <button type="button" class="btn btn-primary"><span class='glyphicon glyphicon-refresh'></span></button>
+          <button type="button" class="btn btn-default" disabled="disabled">Refresh current tab</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class='col-md-1'></div>
+    <div class='col-md-10'>
+       <div role='tabpanel' id='tabs'>
+
+        <!-- Nav tabs -->
+        <ul class='nav nav-tabs' role='tablist' id='tab-headers'>
+
+        </ul>
+
+        <!-- Tab panes -->
+        <div class='tab-content' id='tab-bodies'>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-1'></div>
+    <div class='col-md-10'>
+      <div class="panel-group" id="current-story" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="current-story-heading">
+            <h3 class="panel-title">
+              <a data-toggle="collapse" data-parent="#current-story" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Selected Story
+              </a>
+            </h3>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in text-left" role="tabpanel" aria-labelledby="current-story-heading">
+            <div class="panel-body" id='current-story-body'>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
