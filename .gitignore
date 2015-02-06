@@ -4,4 +4,4 @@ _site
 Gemfile
 Gemfile.lock
 
-node_modules
+test/node_modules/*
