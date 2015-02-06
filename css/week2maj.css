@@ -54,3 +54,7 @@ body {
 	font-size: 15px;
 	text-transform: none;
 }
+
+iframe {
+	border: none;
+}
