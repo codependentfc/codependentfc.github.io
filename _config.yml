@@ -15,4 +15,4 @@ url: 'http://codependentfc.github.io'
 # Build settings
 markdown: kramdown
 
-exclude: [test]
+exclude: [test, node_modules]
