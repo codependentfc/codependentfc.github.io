@@ -3,3 +3,5 @@ _site
 .DS_Store
 Gemfile
 Gemfile.lock
+
+node_modules
