@@ -1,6 +1,8 @@
 // TODO //
 /////////
-// Tab dissapears if next page ajax fails.
+// Resolve error - tab removed when next pag request comes back empty
+// refactor to show/hide/repopulate tabs rather than add and remove!
+/////////
 
 $(document).ready(function() {
 
@@ -21,7 +23,6 @@ $(document).ready(function() {
   var trails = [];
   var autocompleteArray = [];
   var dropdownState = 'closed';
-  var helpState = 'off';
 
   // Get Section names
   // Populate sectionAssoc object for Id/Name lookup

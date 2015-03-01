@@ -13,18 +13,19 @@ body {
 
 #uk-news li {
 	list-style: decimal;
+	font-size: 16px;
 }
 
 #sport li {
 	list-style: decimal;
+	font-size: 16px;
+
 }
 
 #travel li {
 	list-style: decimal;
-}
+	font-size: 16px;
 
-#uk-news {
-	color: ;
 }
 
 .nav {
@@ -53,4 +54,8 @@ body {
 	font-family: "Guardian Egyptian Web","Guardian Text Egyptian Web",Georgia,serif;
 	font-size: 15px;
 	text-transform: none;
+}
+
+iframe {
+	border: none;
 }
